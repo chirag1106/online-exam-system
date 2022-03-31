@@ -1,0 +1,189 @@
+/* Color Theme Swatches in Hex */
+.Treasurana---Geocaching-App-1-hex { background-color: #267365; }
+.Treasurana---Geocaching-App-2-hex { background-color: #F2CB05; }
+.Treasurana---Geocaching-App-3-hex { background-color: #F29F05; }
+.Treasurana---Geocaching-App-4-hex { color: #F28705; }
+.Treasurana---Geocaching-App-5-hex { color: #F23030; }
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: beige;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: #817e7e8a;
+  }
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.26);
+    
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+
+.nav{
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 100vw;
+    border-bottom: 3px solid#F23030;
+    box-shadow: 1px 1px 5px 1px black;
+}
+.logo img {
+    max-width: 35%;
+    margin:0.5em 1rem;
+    
+}
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height:85vh;
+}
+.footer{
+    border-top:  3px solid #F23030 ;
+    /* padding: 0.5em 1rem; */
+    height: 8vh;
+    width: 100vw;
+    box-shadow: 0px 0px 5px 1px black;
+    
+}
+.footer ul{
+    padding: 1vh;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footer li{
+    list-style: none;
+    color: #F28705 ;
+}
+.footer a{
+    color: #F28705 ;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: #f20505 ;
+    text-decoration: none;
+}
+.footer li:hover{
+    border-bottom-width: 10px ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #F2CB05;
+    text-decoration: none;
+}
+
+
+
+/* form */
+  
+input[type=text], select, [type=number] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+
+  
+  input[type=submit] {
+    margin-top: 6px;
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+
+    width: 300px;
+
+    border-radius: 5px;
+
+    padding: 20px;
+  }
+  
+
+  
+  .col {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+  }
+  
+ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
