@@ -60,7 +60,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><b>Netcamp</b></a>
+      <!-- <a class="navbar-brand" href="#"><b>Netcamp</b></a> -->
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -113,7 +113,7 @@ $c=0;
 echo '</table></div></div>';
 
 }?>
-<!--<span id="countdown" class="timer"></span>
+<!-- <span id="countdown" class="timer"></span>
 <script>
 var seconds = 40;
     function secondPassed() {
@@ -131,7 +131,7 @@ var seconds = 40;
     }
     }
 var countdownTimer = setInterval('secondPassed()', 1000);
-</script>-->
+</script> -->
 
 <!--home closed-->
 
