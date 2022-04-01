@@ -1,18 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Sacramento:400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="style.css">
   <title>DGI | TEST YOUR SKILL </title>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="menu.js" type="text/javascript"></script>
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-  <?php if (@$_GET['w']) {
-    echo '<script>alert("' . @$_GET['w'] . '");</script>';
+  
+  <!-- <link href='https://fonts.googleapis.com/css?family=Sacramento:400' rel='stylesheet' type='text/css'> -->
+  <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'> -->
+  <?php if (isset($_GET['w']) && !empty($_GET['w'])) {
+    echo '<script>alert("' . $_GET['w'] . '");</script>';
   }
   ?>
   <script>
@@ -72,9 +71,7 @@
 
     <div id="close" style="display:none" class="ham-menu">
       <img src="close.png" alt="">
-
     </div>
-
     <div id="ham" class="ham-menu">
       <img src="menu.png" alt="">
     </div>
@@ -89,24 +86,18 @@
       <li><a class="menu-item feedback" href="javascript:void(0);">Feedback</a></li>
     </ul>
   </div>
-  <!-- <div class="trans-bg"></div> -->
   <div class="section">
+    
     <!-- student-login -->
     <div id="student" class="container">
       <form>
-        <h1>
-          <center>Sign In<br>
-            <h6>(Students)</h6>
-          </center>
-        </h1>
+        <h1><center>Sign In<br><h6>(Students)</h6></center></h1>
         <div class="row">
-
           <div class="col">
             <input type="text" id="email" name="mail" placeholder="Enter Your Email_Id" autocomplete="off">
           </div>
         </div>
         <div class="row">
-
           <div class="col">
             <input type="text" id="password" name="password" placeholder="Enter Your Password" autocomplete="off">
           </div>
@@ -120,20 +111,14 @@
 
     <!-- admin-login  -->
     <div id="admin" class="container">
-      <form autocomplete="off">
-        <h1>
-          <center>Sign In<br>
-            <h6>(Administrator)</h6>
-          </center>
-        </h1>
+      <form method="POST" action="#">
+        <h1><center>Sign In<br><h6>(Administrator)</h6></center></h1>
         <div class="row">
-
           <div class="col">
             <input type="text" id="email" name="mail" placeholder="Enter Your Email_Id" autocomplete="off">
           </div>
         </div>
         <div class="row">
-
           <div class="col">
             <input type="text" id="password" name="password" placeholder="Enter Your Password" autocomplete="off">
           </div>
@@ -144,17 +129,12 @@
       </form>
     </div>
     <!-- admin-login end -->
-    <div class="mid">
-      <!-- <div class="mid-1"></div> -->
-      <!-- <h1>Or</h1> -->
-      <!-- <div class="mid-1"></div> -->
-    </div>
-    <!-- <h1 class="neonText">
-      QUIZ TIME?
-    </h1> -->
+
+    <div class="mid"></div>
+
     <!-- student reg start -->
     <div class="container">
-      <form autocomplete="off" action="/action_page.php">
+      <form method="POST" action="#">
         <h1>
           <center>Sign Up</center>
         </h1>
