@@ -88,19 +88,19 @@
     <!-- student-login -->
     <div id="student" class="container">
       <form>
-        <h1><center>Sign In<br><h6>(Students)</h6></center></h1>
+        <h1><center>Log In<br><h6>(Students)</h6></center></h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="email" name="mail" placeholder="Enter Your Email_Id" autocomplete="off">
+            <input type="text" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off">
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" id="password" name="password" placeholder="Enter Your Password" autocomplete="off">
+            <input type="text" id="password" name="stu-password" placeholder="Enter Your Password" autocomplete="off">
           </div>
         </div>
         <div class="row">
-          <input type="submit" value="Submit">
+          <input type="submit" value="Log In">
         </div>
       </form>
     </div>
@@ -109,19 +109,19 @@
     <!-- admin-login  -->
     <div id="admin" class="container">
       <form method="POST" action="#">
-        <h1><center>Sign In<br><h6>(Administrator)</h6></center></h1>
+        <h1><center>Log In<br><h6>(Administrator)</h6></center></h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="email" name="mail" placeholder="Enter Your Email_Id" autocomplete="off">
+            <input type="text" id="email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off">
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" id="password" name="password" placeholder="Enter Your Password" autocomplete="off">
+            <input type="text" id="password" name="admin-password" placeholder="Enter Your Password" autocomplete="off">
           </div>
         </div>
         <div class="row">
-          <input type="submit" value="Submit">
+          <input type="submit" value="Log In">
         </div>
       </form>
     </div>
@@ -136,19 +136,16 @@
           <center>Sign Up</center>
         </h1>
         <div class="row">
-
           <div class="col">
-            <input type="text" id="full_name" name="full_name" placeholder="Your full name.." autocomplete="off">
+            <input type="text" id="full_name" name="name" placeholder="Your Full Name" autocomplete="off">
           </div>
         </div>
         <div class="row">
-
           <div class="col">
-            <input type="text" id="email" name="email" placeholder="Your Email Id.." autocomplete="off">
+            <input type="text" id="email" name="email" placeholder="Your Email Id" autocomplete="off">
           </div>
         </div>
         <div class="row">
-
           <div class="col">
             <select id="country" name="Gender">
               <option value="#">Select Gender</option>
@@ -158,10 +155,9 @@
             </select>
           </div>
         </div>
-
         <div class="row">
           <div class="col">
-            <input type="number" id="Mobile_no" name="Mobile_no" placeholder="Enter Your Mobile Number" autocomplete="off">
+            <input type="number" id="Mobile_no" name="phone" placeholder="Enter Your Mobile Number" autocomplete="off">
           </div>
         </div>
         <div class="row">
@@ -171,11 +167,11 @@
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" id="confirm_password" name="confirm_password" placeholder="Confirm Password" autocomplete="off">
+            <input type="text" id="confirm_password" name="cpassword" placeholder="Confirm Password" autocomplete="off">
           </div>
         </div>
         <div class="row">
-          <input type="submit" value="Submit">
+          <input type="submit" value="Sign Up">
         </div>
       </form>
     </div>
