@@ -66,7 +66,7 @@
       <li><a class="developer" href="javascript:void(0);"><img src="developer.png" alt="Admin"></a></li>
       <a class="developer" href="javascript:void(0);">Developer</a>
       <li><a class="feedback" href="javascript:void(0);"><img src="feedback.png" alt="Admin"></a></li>
-      <a class="feedback" href="javascript:void(0);">Feedback</a>
+      <a class="feedback" href="./online-examination-systen-in-php-master-1/feedback.php" target="_blank">Feedback</a>
     </ul>
 
     <div id="close" style="display:none" class="ham-menu">
