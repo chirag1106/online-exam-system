@@ -80,7 +80,7 @@ body{
   right:0px;
   top:85px;
   width:100vw;
-  height:45vh;
+  height:300px;
 }
 .menu-item:hover{
   border-bottom:1px solid #F23030;
@@ -144,8 +144,8 @@ body{
 
 .footer{
     border-top:  3px solid #F23030 ;
-    /* padding: 0.5em 1rem; */
-    height: 7vh;
+    padding: 0.5em 1rem;
+    min-height: 7vh;
     width: 100vw;
     box-shadow: 0px 0px 5px 1px black;
     
