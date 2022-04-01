@@ -7,9 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="menu.js" type="text/javascript"></script>
-  
-  <!-- <link href='https://fonts.googleapis.com/css?family=Sacramento:400' rel='stylesheet' type='text/css'> -->
-  <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'> -->
   <?php if (isset($_GET['w']) && !empty($_GET['w'])) {
     echo '<script>alert("' . $_GET['w'] . '");</script>';
   }
