@@ -11,14 +11,20 @@ $("#close").on('click',function(){
 });
 
 $(".admin").on('click',function(){
+    $("#ham").show(1);
+    $("#close").hide(1);
     $(".ham-menu-item").hide(200);
     $("#student").hide(1);
     $("#admin").show(1);
 });
 $(".developer").on('click',function(){
+    $("#ham").show(1);
+    $("#close").hide(1);
     $(".ham-menu-item").hide(200);
 });
 $(".feedback").on('click',function(){
+    $("#ham").show(1);
+    $("#close").hide(1);
     $(".ham-menu-item").hide(200);
 });
     
