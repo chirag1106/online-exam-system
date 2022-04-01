@@ -205,14 +205,7 @@
   </div>
 
   <div style="padding-top:10px" class="footer Cositas-Rorey-2-4-hex">
-    <center>&copy; <script>
-        document.write(new Date().getFullYear())
-      </script> || Developed and Designed by Chirag Gupta and Vikrant Tanwar.</center>
-    <!-- <ul>
-      <li><a href="">ADMIN</a></li>
-      <li><a href="">DEVELOPERS</a></li>
-      <li><a href="">FEEDBACK</a></li>
-    </ul> -->
+    <center>&copy;<script>document.write(new Date().getFullYear())</script> || Developed and Designed by Chirag Gupta and Vikrant Tanwar.</center>
   </div>
 </body>
 
