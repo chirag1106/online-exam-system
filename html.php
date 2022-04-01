@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Sacramento:400' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" href="style.css">
 <title>DGI | TEST YOUR SKILL </title>
  <script src="js/jquery.js" type="text/javascript"></script>
@@ -22,50 +22,15 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 
 <body>
 
-  <nav class="nav">
+  <nav class="nav Treasurana---Geocaching-App-2-hex">
     <div class="logo">
       <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions">
     </div>
-    <ul>
-      <li><a href=""><img src="admin.png" alt="Admin"></a></li>
-      <li><a href=""><img src="admin.png" alt="Admin"></a></li>
-      <li><a href=""><img src="admin.png" alt="Admin"></a></li>
-    </ul>
   </nav>
-  <!-- <div class="trans-bg"></div> -->
   <div class="section">
-    <div class="container">
-      <form>
-        <h1><center>Sign In<br><h6>(Students)</h6></center></h1>
-        <div class="row">
-          
-          <div class="col">
-            <input type="text" id="email" name="mail" placeholder="Enter Your Email_Id">
-            </div>
-          </div>
-          <div class="row">
-            
-            <div class="col">
-              <input type="text" id="password" name="password" placeholder="Enter Your Password">
-            </div>
-          </div>
-          <div class="row">
-          <input type="submit" value="Submit">
-        </div>
-      </form>
-    </div>
-    <div class="mid">
-      <!-- <div class="mid-1"></div> -->
-      <!-- <h1>Or</h1> -->
-      <!-- <div class="mid-1"></div> -->
-    </div>
-    <!-- <h1 class="neonText">
-      QUIZ TIME?
-    </h1> -->
-    <div class="container">
-      <form action="/action_page.php">
-        <h1><center>Sign Up</center></h1>
-        <div class="row">
+  <div class="container Treasurana---Geocaching-App-2-hex">
+  <form action="/action_page.php">
+    <div class="row">
       
       <div class="col">
         <input type="text" id="full_name" name="full_name" placeholder="Your full name..">
@@ -87,7 +52,12 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
         </select>
       </div>
     </div>
-    
+    <div class="row">
+      
+      <div class="col">
+        <input type="text" id="college_name" name="college_name" placeholder="Enter Your College Name">
+      </div>
+    </div>
     <div class="row">
       <div class="col">
         <input type="number" id="Mobile_no" name="Mobile_no" placeholder="Enter Your Mobile Number">
@@ -110,13 +80,12 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 </div>
   </div>
 
-  <div style="padding-top:10px" class="footer Cositas-Rorey-2-4-hex">
-  <center>&copy; <script>document.write(new Date().getFullYear())</script> || Designed and Developed by Chirag Gupta and Vikrant Tanwar.</center>
-    <!-- <ul>
+  <div class="footer Treasurana---Geocaching-App-1-hex">
+    <ul>
       <li><a href="">ADMIN</a></li>
       <li><a href="">DEVELOPERS</a></li>
       <li><a href="">FEEDBACK</a></li>
-    </ul> -->
+    </ul>
   </div>
 </body>
 </html>
