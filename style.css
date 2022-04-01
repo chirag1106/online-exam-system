@@ -125,7 +125,10 @@ body{
   list-style: none;
 }
 .section{
-    background-image: url(online-examination-systen-in-php-master-1/image/bg.jpg);
+    background-image: url(./bg.jpg);
+    background-position: 50% 41%;
+    background-repeat: no-repeat;
+    background-size: 100%;
     flex-direction: row;
     display: flex;
     justify-content: space-evenly;
