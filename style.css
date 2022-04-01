@@ -79,7 +79,10 @@ body{
   right:0px;
   top:85px;
   width:100vw;
-  height:32vh;
+  height:45vh;
+}
+.menu-item:hover{
+  border-bottom:1px solid #F23030;
 }
 .ham-menu-item a{
   padding-bottom:10px ;
@@ -88,30 +91,37 @@ body{
   color: #d61616;
   text-decoration: none;
 }
+.ham-menu-item li img{
+  padding-top: 25px;
+
+}
 .ham-menu-item li{
   text-align: center;
   list-style: none;
-  padding-top: 10px;
-  margin-top: 20px;
 }
-/* .ham-menu-item ul{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
 
-} */
 
 .nav ul{
-  width: 12%;
+  width: 23%;
   /* float: right; */
-  padding-top: 17PX;
+  padding-top: 17px;
   /* margin-top:3% ; */
   display: flex;
   flex-direction: row;
 }
+.nav ul a{
+  padding-top: 10px;
+  text-decoration: none;
+  color: #F23030;
+  margin-bottom:30px;
+  padding-right:10px;
+}
+.nav ul a:hover{
+  border-bottom: 1px solid #F23030;
+}
 .nav ul li{
   width:50%;
-  padding-right:10px;
+  padding-left:10px;
   list-style: none;
 }
 .section{
@@ -122,6 +132,9 @@ body{
     align-items: center;
     padding: 20px;
     height:80vh;
+}
+#admin{
+  display: none;
 }
 
 .footer{
@@ -239,16 +252,17 @@ input[type=text], select, [type=number] {
     width: 20%;
   } */
   
-
-  @media screen and (max-width: 660px) {
+  @media screen and (max-width: 1200px) {
     .ham-menu{
       display: block;
     }
-    .logo{
-      width:100%;
-    }
     .nav ul{
       display:none;
+    }
+  }
+  @media screen and (max-width: 660px) {
+    .logo{
+      width:100%;
     }
     .mid{
       margin: 10px;

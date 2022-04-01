@@ -6,7 +6,10 @@
 <link href='https://fonts.googleapis.com/css?family=Sacramento:400' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="style.css">
 <title>DGI | TEST YOUR SKILL </title>
- <script src="./online-examination-systen-in-php-master-1/js/jquery.js" type="text/javascript"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
  
 <script src="menu.js" type="text/javascript"></script>
  	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -29,25 +32,38 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
       <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions">
     </div>
     <ul>
-      <li><a href=""><img src="admin.png" alt="Admin"></a></li>
-      <li><a href=""><img src="admin.png" alt="Admin"></a></li>
-      <li><a href=""><img src="admin.png" alt="Admin"></a></li>
+      <li><a class="admin" href="javascript:void(0);"><img src="admin.png" alt="Admin"></a></li>
+      <a class="admin" href="javascript:void(0);">Admin</a>
+      <li><a class="developer" href="javascript:void(0);"><img src="developer.png" alt="Admin"></a></li>
+      <a class="developer" href="javascript:void(0);">Developer</a>
+      <li><a class="feedback" href="javascript:void(0);"><img src="feedback.png" alt="Admin"></a></li>
+      <a class="feedback" href="javascript:void(0);">Feedback</a>
     </ul>
+
+    <div id="close"  style="display:none" class="ham-menu">
+      <img  src="close.png" alt="">
+
+    </div>
+
     <div id="ham" class="ham-menu">
-    <img src="menu.png" alt="">
+    <img  src="menu.png" alt="">
     </div>
   </nav>
-  <div class="ham-menu-item">
+  <div class="ham-menu-item" style="display:none">
   <ul>
-      <li><a href="">Admin</a></li>
-      <li><a href="">Developer</a></li>
-      <li><a href="">Feedback</a></li>
+      <li><a class="admin" href="javascript:void(0);"><img src="admin.png" alt="Admin"></a></li>
+      <li><a class="menu-item admin" href="javascript:void(0);">Admin</a></li>
+      <li><a class="developer" href="javascript:void(0);"><img src="developer.png" alt="Admin"></a></li>
+      <li><a class="menu-item developer" href="javascript:void(0);">Developer</a></li>
+      <li><a class="feedback" href="javascript:void(0);"><img src="feedback.png" alt="Admin"></a></li>
+      <li><a class="menu-item feedback" href="javascript:void(0);">Feedback</a></li>
     </ul>
   </div>
   <!-- <div class="trans-bg"></div> -->
   <div class="section">
-    <div class="container">
-      <form>
+    <!-- student-login -->
+    <div id="student" class="container">
+      <form  autocomplete="off" >
         <h1><center>Sign In<br><h6>(Students)</h6></center></h1>
         <div class="row">
           
@@ -66,6 +82,30 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
         </div>
       </form>
     </div>
+    <!-- student-login end -->
+    
+    <!-- admin-login  -->
+    <div id="admin" class="container">
+      <form  autocomplete="off" >
+        <h1><center>Sign In<br><h6>(Administrator)</h6></center></h1>
+        <div class="row">
+          
+          <div class="col">
+            <input type="text" id="email" name="mail" placeholder="Enter Your Email_Id">
+            </div>
+          </div>
+          <div class="row">
+            
+            <div class="col">
+              <input type="text" id="password" name="password" placeholder="Enter Your Password">
+            </div>
+          </div>
+          <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+    <!-- admin-login end -->
     <div class="mid">
       <!-- <div class="mid-1"></div> -->
       <!-- <h1>Or</h1> -->
@@ -74,53 +114,55 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
     <!-- <h1 class="neonText">
       QUIZ TIME?
     </h1> -->
+    <!-- student reg start -->
     <div class="container">
-      <form action="/action_page.php">
+      <form autocomplete="off" action="/action_page.php">
         <h1><center>Sign Up</center></h1>
         <div class="row">
       
-      <div class="col">
-        <input type="text" id="full_name" name="full_name" placeholder="Your full name..">
+          <div class="col">
+            <input type="text" id="full_name" name="full_name" placeholder="Your full name..">
+          </div>
+        </div>
+      <div class="row">
+        
+        <div class="col">
+          <input type="text" id="email" name="email" placeholder="Your Email Id..">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      
-      <div class="col">
-        <input type="text" id="email" name="email" placeholder="Your Email Id..">
+      <div class="row">
+        
+        <div class="col">
+          <select id="country" name="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      
-      <div class="col">
-        <select id="country" name="Gender">
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-    </div>
     
-    <div class="row">
-      <div class="col">
-        <input type="number" id="Mobile_no" name="Mobile_no" placeholder="Enter Your Mobile Number">
+      <div class="row">
+        <div class="col">
+          <input type="number" id="Mobile_no" name="Mobile_no" placeholder="Enter Your Mobile Number">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <input type="text" id="password" name="password" placeholder="Enter Your Password">
+      <div class="row">
+        <div class="col">
+          <input type="text" id="password" name="password" placeholder="Enter Your Password">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <input type="text" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+      <div class="row">
+        <div class="col">
+          <input type="text" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
   </form>
 </div>
-  </div>
+<!-- student reg end -->
+</div>
 
   <div style="padding-top:10px" class="footer Cositas-Rorey-2-4-hex">
   <center>&copy; <script>document.write(new Date().getFullYear())</script> || Developed and Designed by Chirag Gupta and Vikrant Tanwar.</center>
