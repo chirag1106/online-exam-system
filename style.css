@@ -1,15 +1,17 @@
 /* Color Theme Swatches in Hex */
-.Treasurana---Geocaching-App-1-hex { background-color: #267365; }
-.Treasurana---Geocaching-App-2-hex { background-color: #F2CB05; }
-.Treasurana---Geocaching-App-3-hex { background-color: #F29F05; }
-.Treasurana---Geocaching-App-4-hex { color: #F28705; }
-.Treasurana---Geocaching-App-5-hex { color: #F23030; }
+.Cositas-Rorey-2-1-hex { background-color: #CCD6FF; }
+.Cositas-Rorey-2-2-hex { background-color: #FFCCD7; }
+.Cositas-Rorey-2-3-hex { background-color: #E4E9FE; }
+.Cositas-Rorey-2-4-hex { background-color: #FFF2CC; }
+.Cositas-Rorey-2-5-hex { background-color: #D9FFDF; }
+
+
 
 *{
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
-    overflow-x: hidden;
+    /* overflow: hidden; */
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -21,7 +23,7 @@ body{
     
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: beige;
+    background-color: rgb(245, 245, 245);
 }
 
 ::-webkit-scrollbar {
@@ -44,28 +46,51 @@ body{
 
 
 .nav{
-    /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-around;
+  background-color: #FFF2CC;
     height: 100%;
     width: 100vw;
-    border-bottom: 3px solid#F23030;
+    border-bottom: 3px solid #F23030;
     box-shadow: 1px 1px 5px 1px black;
+}
+.logo{
+  width: 40%;
+  /* display: inline; */
 }
 .logo img {
     max-width: 35%;
     margin:0.5em 1rem;
     
 }
+
+.nav ul{
+  width: 12%;
+  /* float: right; */
+  padding-top: 1%;
+  /* margin-right:auto ; */
+  display: flex;
+  flex-direction: row;
+}
+.nav ul li{
+  width:50%;
+  padding-right:10px;
+  list-style: none;
+}
 .section{
+    background-image: url(online-examination-systen-in-php-master-1/image/bg.jpg);
+    flex-direction: row;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px;
-    height:85vh;
+    height:80vh;
 }
+
 .footer{
     border-top:  3px solid #F23030 ;
     /* padding: 0.5em 1rem; */
-    height: 8vh;
+    height: 7vh;
     width: 100vw;
     box-shadow: 0px 0px 5px 1px black;
     
@@ -113,26 +138,35 @@ input[type=text], select, [type=number] {
   
   input[type=submit] {
     margin-top: 6px;
+    position: relative;
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    float: right;
+    float: left;
+    left: 35%;
   }
   
   input[type=submit]:hover {
     background-color: #45a049;
   }
   
+  .container h1{
+    font-size: 26px;
+    color:#fff;
+    text-shadow: 1px 1px 5px #27282a;
+    margin-bottom: 10px;
+  }
   .container {
-
+    box-shadow: 1px 1px 10px 1px #000;
+    background-color: #9a0942;
     width: 300px;
 
     border-radius: 5px;
 
-    padding: 20px;
+    padding:  20px 20px 15px 20px;
   }
   
 
@@ -149,12 +183,48 @@ input[type=text], select, [type=number] {
     display: table;
     clear: both;
   }
+  .mid{
+    display: flex;
+    /* flex-direction: column; */
+    /* width: 25%; */
+    height:40vh;
+    border-radius: 0%;
+    border-left:2px outset #F23030;
+    /* border-right:2px dashed #fff; */
+  
+  }
+  /* .mid-1{
+    border-top:2px dashed #04AA6D;
+    width: 40%;
+  }
+  .mid h1{
+    font-size: larger;
+    width: 20%;
+  } */
   
 
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
+  @media screen and (max-width: 660px) {
+    .mid{
+      margin: 10px;
+      height: 1%;
+      flex-direction: row;
+      border-left: none;
+      border-right: none;
+      width: 80vw;
+      border-top:2px outset #F23030;
+    }
+    .section{
+      height: 100%;
+      flex-direction: column;
+    }
+    .col-25, .col-75{
       width: 100%;
-      margin-top: 0;
+      margin-top: 0px;
+    }
+    input[type=submit] {
+      left: 0%;
+      width: 100%;
+      margin-top: 5px;
     }
   }
 
