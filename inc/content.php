@@ -1,4 +1,4 @@
-<div class="section">
+ <div class="section">
     <!-- student-login -->
     <div id="student" class="container">
       <form>
@@ -76,12 +76,12 @@
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" id="password" name="password" placeholder="Enter Your Password" autocomplete="off">
+            <input type="password" id="password" name="password" placeholder="Enter Your Password" autocomplete="off">
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" id="confirm_password" name="cpassword" placeholder="Confirm Password" autocomplete="off">
+            <input type="password" id="confirm_password" name="cpassword" placeholder="Confirm Password" autocomplete="off">
           </div>
         </div>
         <div class="row">
@@ -90,4 +90,4 @@
       </form>
     </div>
     <!-- student reg end -->
-  </div>
+ </div>
