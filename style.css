@@ -31,8 +31,8 @@ body{
   }
   
 
-  ::-webkit-scrollbar-track {
-    background: #817e7e8a;
+::-webkit-scrollbar-track {
+    display: none;
   }
   
 ::-webkit-scrollbar-thumb {
@@ -46,6 +46,7 @@ body{
 
 
 .nav{
+  z-index: 400;
   display: flex;
   justify-content: space-around;
   background-color: #FFF2CC;
@@ -127,7 +128,8 @@ body{
   list-style: none;
 }
 .section{
-  background-position: 50% 41%;
+    z-index: -100;
+    background-position: 50% 41%;
     background-image: url(./bg.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -141,6 +143,38 @@ body{
 #admin{
   display: none;
 }
+
+.profiles{
+  width: 90%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile{
+  color: #fff;
+  text-shadow: 1px 1px 5px #27282a;
+  border-radius: 10px;
+  width: 45%;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
 
 .footer{
     border-top:  3px solid #F23030 ;
@@ -180,11 +214,18 @@ body{
 
 
 /* form */
-  
+
 input[type=text], select, [type=number] {
+    border:none;
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  input[type=password], select, [type=number] {
+    border:none;
+    width: 100%;
+    padding: 12px;
     border-radius: 4px;
     resize: vertical;
   }
@@ -203,9 +244,26 @@ input[type=text], select, [type=number] {
     float: left;
     left: 35%;
   }
-  
+
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #03925e;
+  }
+
+  input[type=button] {
+    margin-top: 6px;
+    position: relative;
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    left: 43%;
+  }
+  
+  input[type=button]:hover {
+    background-color: #03925e;
   }
   
   .container h1{
@@ -218,7 +276,6 @@ input[type=text], select, [type=number] {
     box-shadow: 1px 1px 10px 1px #000;
     background-color: #9a0942;
     width: 300px;
-
     border-radius: 5px;
 
     padding:  20px 20px 15px 20px;
@@ -248,15 +305,7 @@ input[type=text], select, [type=number] {
     /* border-right:2px dashed #fff; */
   
   }
-  /* .mid-1{
-    border-top:2px dashed #04AA6D;
-    width: 40%;
-  }
-  .mid h1{
-    font-size: larger;
-    width: 20%;
-  } */
-  
+
   @media screen and (max-width: 1200px) {
     .ham-menu{
       display: block;
@@ -282,20 +331,61 @@ input[type=text], select, [type=number] {
       height: 100%;
       flex-direction: column;
     }
-    .col-25, .col-75{
+    .col{
       width: 100%;
-      margin-top: 0px;
+      margin-top: 6px;
     }
+
     input[type=submit] {
       left: 0%;
       width: 100%;
       margin-top: 5px;
     }
+    input[type=button] {
+      left: 0%;
+      width: 100%;
+      margin-top: 5px;
+    }
+    .feed-container{
+      width:100% !important;
+    }
   }
 
 
+/* feedback started */
+
+.feed-container{
+  width: 700px;
+  background-color: #9a0942;
+}
+
+textarea{
+  padding: 12px;
+  /* border: 1px solid #f23030; */
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 6px;
+  resize: none;
+  overflow-y: scroll;
+}
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
 
 
+textarea::-webkit-scrollbar-track {
+  background: #2e2e2e2d;
+  display: none;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(104, 103, 103, 0.26);
+  
+}
+textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 99, 99, 0.35);
+}
 
 
 
