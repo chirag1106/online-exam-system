@@ -14,6 +14,7 @@
     ?>
     <div class="section">
         <div class="feed-container container">
+            <center><h4>Your feedback is valueable to us.</h4></center>
          <form method="Post" action="#"></form>
             <div class="row">
                 <div class="col">
@@ -37,7 +38,7 @@
                 <textarea name="feedback" id="feedback"  rows="10" placeholder="Enter Your Message Here"></textarea>
             </div>
             <div class="row">
-                <input type="Button" value="Submit">
+                <input type="submit" value="Submit" style="left:43%;">
             </div>
 
         </div>

@@ -8,7 +8,7 @@
       <li><a class="developer" href="javascript:void(0);"><img src="developer.png" alt="Developer"></a></li>
       <a class="developer" href="javascript:void(0);">Developer</a>
       <li><a class="feedback" href="feedback.php"><img src="feedback.png" target="_blank" alt="Feedback"></a></li>
-      <a class="feedback" href="feedback.php" target="_blank">Feedback</a>
+      <a class="feedback" href="feedback.php" >Feedback</a>
     </ul>
 
     <div id="close" style="display:none" class="ham-menu">
@@ -25,7 +25,7 @@
       <li><a class="ham-developer" href="javascript:void(0);"><img src="developer.png" alt="Developer"></a></li>
       <li><a class="menu-item ham-developer" href="javascript:void(0);">Developer</a></li>
       <li><a class="ham-feedback" href="javascript:void(0);"><img src="feedback.png" alt="Feedback"></a></li>
-      <li><a class="menu-item ham-feedback" href="javascript:void(0);">Feedback</a></li>
+      <li><a class="menu-item ham-feedback" href="feedback.php">Feedback</a></li>
     </ul>
   </div>
   

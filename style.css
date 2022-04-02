@@ -1,3 +1,4 @@
+/* @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap'); */
 /* Color Theme Swatches in Hex */
 .Cositas-Rorey-2-1-hex { background-color: #CCD6FF; }
 .Cositas-Rorey-2-2-hex { background-color: #FFCCD7; }
@@ -16,6 +17,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     outline: none;
+    font-family: 'BIZ UDPMincho', serif;
 }
 
 body{
@@ -249,7 +251,7 @@ input[type=text], select, [type=number] {
     background-color: #03925e;
   }
 
-  input[type=button] {
+  /* input[type=button] {
     margin-top: 6px;
     position: relative;
     background-color: #04AA6D;
@@ -260,7 +262,7 @@ input[type=text], select, [type=number] {
     cursor: pointer;
     float: left;
     left: 43%;
-  }
+  } */
   
   input[type=button]:hover {
     background-color: #03925e;
@@ -318,6 +320,7 @@ input[type=text], select, [type=number] {
     .logo{
       width:100%;
     }
+
     .mid{
       margin: 10px;
       height: 1%;
@@ -336,19 +339,24 @@ input[type=text], select, [type=number] {
       margin-top: 6px;
     }
 
-    input[type=submit] {
-      left: 0%;
+    .feed-container input[type=submit] {
+      left: 0% !important;
       width: 100%;
-      margin-top: 5px;
+      margin-top: 30px;
     }
-    input[type=button] {
-      left: 0%;
-      width: 100%;
-      margin-top: 5px;
-    }
+    
     .feed-container{
       width:100% !important;
+      min-height:70vh;
     }
+    .feed-container h4{
+      font-size: large !important;
+    }
+  }
+  .feed-container h4{
+    color:#fff;
+    font-size: larger;
+    margin: 30px 0px 40px 0px;
   }
 
 
