@@ -44,7 +44,7 @@
     <div class="mid"></div>
 
     <!-- student reg start -->
-    <div class="container">
+    <div class="container registration">
       <form method="POST" action="#">
         <h1>
           <center>Sign Up</center>

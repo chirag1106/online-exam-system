@@ -12,6 +12,8 @@ $("#close").on('click',function(){
 $(".admin").on('click',function(){
     $("#student").hide(1);
     $("#admin").show(1);
+    $(".registration").hide(1);
+    $(".mid").hide(1);
 });
 
 
@@ -34,4 +36,12 @@ $(".ham-feedback").on('click',function(){
     $(".ham-menu-item").hide(200);
 });
     
+    $(window).resize(function(){
+        $(".ham-menu-item").hide(200);
+        $("#close").hide(1);
+        $("#ham").show(1);
+    });
+
+    
+
 });

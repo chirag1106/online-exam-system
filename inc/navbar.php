@@ -3,6 +3,8 @@
       <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions">
     </div>
     <ul>
+      <li><a class="ham-admin" href="index.php"><img src="home.png" alt="Home"></a></li>
+      <a class="menu-item ham-admin" href="index.php">Home</a>
       <li><a class="admin" href="javascript:void(0);"><img src="admin.png" alt="Admin"></a></li>
       <a class="admin" href="javascript:void(0);">Admin</a>
       <li><a class="developer" href="javascript:void(0);"><img src="developer.png" alt="Developer"></a></li>
@@ -20,6 +22,8 @@
   </nav>
   <div class="ham-menu-item" style="display:none">
     <ul>
+      <li><a class="ham-admin" href="index.php"><img src="home.png" alt="Home"></a></li>
+      <li><a class="menu-item ham-admin" href="index.php">Home</a></li>
       <li><a class="ham-admin" href="javascript:void(0);"><img src="admin.png" alt="Admin"></a></li>
       <li><a class="menu-item ham-admin" href="javascript:void(0);">Admin</a></li>
       <li><a class="ham-developer" href="javascript:void(0);"><img src="developer.png" alt="Developer"></a></li>
