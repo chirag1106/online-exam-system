@@ -366,7 +366,7 @@ input[type=text]:focus, select, [type=number]:focus {
       border-top:2px outset #F23030;
     }
     .section{
-      height: 100%;
+      min-height: 100vh;
       flex-direction: column;
     }
     .col{
