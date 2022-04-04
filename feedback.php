@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="./menu.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Feedback Form</title>
 </head>
 <body>
 
