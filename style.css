@@ -338,7 +338,7 @@ input[type=text]:focus, select, [type=number]:focus {
     /* width: 25%; */
     height:40vh;
     border-radius: 0%;
-    border-left:2px outset #F23030;
+    border-left:2px outset #fff;
     /* border-right:2px dashed #fff; */
   
   }
@@ -363,7 +363,7 @@ input[type=text]:focus, select, [type=number]:focus {
       border-left: none;
       border-right: none;
       width: 80vw;
-      border-top:2px outset #F23030;
+      border-top:2px outset #fff;
     }
     .section{
       min-height: 100vh;
