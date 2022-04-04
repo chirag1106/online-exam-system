@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var window_open = window.open(
+        "http://localhost/chirag/online-examination-systen-in-php-master-2/account.php?q=1",
+        "_blank",
+        "toolbar=no,scrollbars=yes,resizable=yes,menubar=no,location=no,status=no,titlebar=no",
+        "width=100%,height=100%"
+      );
+      window_open.locationbar = false;
+      window_open.menubar = false;
+      window_open.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+      console.log(window);
+      window_open.onkeydown = function (e) {
+        return false;
+      };
+    </script>
+  </body>
+</html>
