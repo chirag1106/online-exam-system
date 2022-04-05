@@ -4,9 +4,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DGI | TEST YOUR SKILL </title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="menu.js" type="text/javascript"></script>
+  <script src="./js/menu.js" type="text/javascript"></script>
   <?php if (isset($_GET['w']) && !empty($_GET['w'])) {
     echo '<script>alert("' . $_GET['w'] . '");</script>';
   }

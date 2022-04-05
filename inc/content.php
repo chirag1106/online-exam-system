@@ -1,7 +1,7 @@
  <div class="section">
     <!-- student-login -->
     <div id="student" class="container">
-      <form>
+      <form method="post" action="./online-examination-systen-in-php-master-1/login.php?q=index.php" >
         <h1><center>Log In<br><h6>(Students)</h6></center></h1>
         <div class="row">
           <div class="col">
@@ -10,11 +10,11 @@
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" id="password" name="stu-password" placeholder="Enter Your Password" autocomplete="off">
+            <input type="password" id="password" name="stu-password" placeholder="Enter Your Password" autocomplete="off">
           </div>
         </div>
         <div class="row">
-          <input type="submit" value="Log In">
+          <input type="submit" name="stu-submit" value="Log In">
         </div>
       </form>
     </div>
@@ -22,7 +22,7 @@
 
     <!-- admin-login  -->
     <div id="admin" class="container">
-      <form method="POST" action="#">
+      <form method="post" action="./online-examination-systen-in-php-master-1/admin.php?q=index.php">
         <h1><center>Log In<br><h6>(Administrator)</h6></center></h1>
         <div class="row">
           <div class="col">
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="row">
-          <input type="submit" value="Log In">
+          <input type="submit" name="submit" value="Log In">
         </div>
       </form>
     </div>

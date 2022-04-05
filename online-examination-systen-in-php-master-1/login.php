@@ -15,9 +15,9 @@ else{
 	exit();
 }
 
-if(isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email']) && !empty($_POST['password']) ){
-	$email = test_input($_POST['email']);
-	$password = test_input($_POST['password']);
+if(isset($_POST['stu-email']) && isset($_POST['stu-password']) && !empty($_POST['stu-email']) && !empty($_POST['stu-password']) ){
+	$email = test_input($_POST['stu-email']);
+	$password = test_input($_POST['stu-password']);
 }
 else{
 	header("location:$ref?w=Enter Your email");
@@ -27,9 +27,10 @@ $password = md5($password);
 $stmt = $con->prepare('SELECT * FROM user WHERE email = ? and password = ?');
 $stmt->bind_param('ss',$email,$password);
 $stmt->execute();
-$count = mysqli_num_rows($result);
+$result  = $stmt->get_result();
+$count = $result->num_rows;
 if ($count == 1) {
-	while ($row = mysqli_fetch_array($result)) {
+	while ($row = mysqli_fetch_assoc($result)) {
 		$name = $row['name'];
 	}
 	$_SESSION['name'] = $name;
