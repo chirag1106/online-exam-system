@@ -5,13 +5,17 @@
         <h1><center>Log In<br><h6>(Students)</h6></center></h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off">
+            <input type="text" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="password" id="password" name="stu-password" placeholder="Enter Your Password" autocomplete="off">
+            <input type="password" id="password" name="stu-password" placeholder="Enter Your Password" autocomplete="off" required>
           </div>
+        </div>
+        <div class="row">
+          <input type="checkbox" name="remember-me">
+          <label for="remeber-me">Remember Me</label>
         </div>
         <div class="row">
           <div class="col">
