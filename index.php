@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,10 +8,13 @@
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="./js/menu.js" type="text/javascript"></script>
-  <?php if (isset($_GET['w']) && !empty($_GET['w'])) {
-    echo '<script>alert("' . $_GET['w'] . '");</script>';
-  }
+
+  <?php
+  // if (isset($_GET['w']) && !empty($_GET['w'])) {
+  //   echo '<script>alert("' . $_GET['w'] . '");</script>';
+  // }
   ?>
+
   <script>
     function validateForm() {
       var y = document.forms["form"]["name"].value;
@@ -48,12 +52,13 @@
     }
   </script>
 </head>
+
 <body>
-    <?php 
-    require_once("./inc/navbar.php");
-    require_once("./inc/content.php");
-    require_once("./inc/footer.php");
-    ?>
+  <?php
+  require_once("./inc/navbar.php");
+  require_once("./inc/content.php");
+  require_once("./inc/footer.php");
+  ?>
 </body>
 
 </html>

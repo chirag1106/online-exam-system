@@ -20,7 +20,7 @@ if(isset($_POST['stu-email']) && isset($_POST['stu-password']) && !empty($_POST[
 	$password = test_input($_POST['stu-password']);
 }
 else{
-	header("location:$ref?w=Enter Your email");
+	echo 'Enter Your Email Id';
 	exit();
 }
 $password = md5($password);
@@ -35,10 +35,11 @@ if ($count == 1) {
 	}
 	$_SESSION['name'] = $name;
 	$_SESSION['email'] = $email;
-	header('location:account.php?q=1');
+	// header('location:account.php?q=1');
+	echo 'login';
 } 
 else
 {
-	header("location:$ref?w=Wrong Username or Password");
+	echo 'Wrong Username or Password';
 	exit();
 }

@@ -1,7 +1,7 @@
  <div class="section">
     <!-- student-login -->
     <div id="student" class="container">
-      <form method="post" action="./online-examination-systen-in-php-master-1/login.php?q=index.php" >
+      <form method="post" action="#" id="student-login" >
         <h1><center>Log In<br><h6>(Students)</h6></center></h1>
         <div class="row">
           <div class="col">
@@ -14,7 +14,12 @@
           </div>
         </div>
         <div class="row">
-          <input type="submit" name="stu-submit" value="Log In">
+          <div class="col">
+            <span id="err_report"></span>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" name="stu-submit" id="stu-submit" value="Log In">
         </div>
       </form>
     </div>

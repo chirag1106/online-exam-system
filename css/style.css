@@ -132,7 +132,7 @@ body{
 }
 .section{
     height: 100%;
-    /* overflow-y:scroll; */
+    overflow-y:scroll;
     z-index: 100;
     /* background-position: 50% 41%; */
     /* background-image: url(./bg.jpg); */
@@ -241,7 +241,13 @@ body{
 
 
 /* form */
-
+#err_report{
+  display: none;
+  padding: 5px;
+  color: red;
+  font-size: 13px;
+  line-height: 5px;
+}
 input[type=text], select, [type=number] {
     background-color: rgb(230, 230, 230);
     border:none;
@@ -277,7 +283,8 @@ input[type=text]:focus, select, [type=number]:focus {
     border-radius: 4px;
     cursor: pointer;
     float: left;
-    left: 35%;
+    left: 65px;
+    width: 50%;
   }
 
   input[type=submit]:hover {
