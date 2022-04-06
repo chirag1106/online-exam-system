@@ -1,11 +1,15 @@
-<div class="notice-banner" style="padding:10px; margin:5px; color:red;">
-  <marquee behavior="scroll" direction="left"><span style="color: blue;">NOTICE :</span> Site is in under maintainenace, Work is in progress.</marquee>
-</div>
- <div class="section">
+  <div class="notice-banner" style="padding:10px; margin:5px; color:red;">
+    <marquee behavior="scroll" direction="left"><span style="color: blue;">NOTICE :</span> Site is in under maintainenace, Work is in progress.</marquee>
+  </div>
+  <div class="section">
     <!-- student-login -->
     <div id="student" class="container">
-      <form method="post" action="#" id="student-login" >
-        <h1><center>Log In<br><h6>(Students)</h6></center></h1>
+      <form method="post" action="#" id="student-login">
+        <h1>
+          <center>Log In<br>
+            <h6>(Students)</h6>
+          </center>
+        </h1>
         <div class="row">
           <div class="col">
             <input type="text" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off" required>
@@ -35,7 +39,11 @@
     <!-- admin-login  -->
     <div id="admin" class="container">
       <form method="post" action="./online-examination-systen-in-php-master-1/admin.php?q=index.php">
-        <h1><center>Log In<br><h6>(Administrator)</h6></center></h1>
+        <h1>
+          <center>Log In<br>
+            <h6>(Administrator)</h6>
+          </center>
+        </h1>
         <div class="row">
           <div class="col">
             <input type="text" id="email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off">
@@ -102,4 +110,4 @@
       </form>
     </div>
     <!-- student reg end -->
- </div>
+  </div>
