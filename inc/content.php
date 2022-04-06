@@ -1,3 +1,6 @@
+<div class="notice-banner" style="padding:10px; margin:5px; color:red;">
+  <marquee behavior="scroll" direction="left"><span style="color: blue;">NOTICE :</span> Site is in under maintainenace, Work is in progress.</marquee>
+</div>
  <div class="section">
     <!-- student-login -->
     <div id="student" class="container">
