@@ -135,7 +135,7 @@ a{
 }
 .section{
     height: 100%;
-    overflow-y:scroll;
+    /* overflow-y:scroll; */
     z-index: 100;
     /* background-position: 50% 41%; */
     /* background-image: url(./bg.jpg); */
@@ -146,7 +146,7 @@ a{
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
-    height:80vh;
+    min-height:73vh;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
