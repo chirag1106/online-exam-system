@@ -10,6 +10,11 @@
     <title>Feedback Form</title>
 </head>
 <body>
+<nav class="nav">
+    <div class="logo">
+      <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions">
+    </div>
+</nav>
 
 <?php 
     require_once("./inc/navbar.php");
@@ -17,6 +22,7 @@
     <div class="notice-banner" style="padding:10px; margin:5px; color:red;">
         <marquee behavior="scroll" direction="left"><span style="color: blue;">NOTICE :</span> Site is in under maintainenace, Work is in progress.</marquee>
     </div>
+
     <div class="section">
         <div class="feed-container container">
             <center><h4>"Your feedback is valueable to us."</h4></center>
@@ -43,7 +49,7 @@
                 <textarea name="feedback" id="feedback"  rows="10" placeholder="Enter Your Message Here"></textarea>
             </div>
             <div class="row">
-                <input type="submit" value="Submit" style="left:43%;">
+                <input type="submit" value="Submit" style="width:100%;left:0;">
             </div>
 
         </div>
@@ -53,5 +59,10 @@
     require_once("./inc/footer.php");
     ?>
 </body>
+<script>
+    $(document).ready(function (){
+        $('.nav').css("justify-content","start");
+   });
+</script>
 
 </html>

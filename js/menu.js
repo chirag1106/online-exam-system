@@ -9,6 +9,55 @@ $(document).ready(function () {
     $("#ham").show(1);
     $(".ham-menu-item").hide(200);
   });
+  // $(".home").on("click", function () {
+  //   $("#student").show(1);
+  //   $("#admin").hide(1);
+  //   $(".registration").show(1);
+  //   $(".mid").show(1);
+  // });
+
+  $(".ham-home").on("click", function () {
+      if ($(window).width() > 1200) {
+        $("#ham").hide(1);
+        $(".registration").show(1);
+        $(".mid").show(1);
+        $("#close").hide(1);
+        $(".ham-menu-item").hide(200);
+        $("#student").show(1);
+        $("#admin").hide(1);
+      }
+      else{
+        $("#ham").show(1);
+        $(".registration").show(1);
+        $(".mid").show(1);
+        $("#close").hide(1);
+        $(".ham-menu-item").hide(200);
+        $("#student").show(1);
+        $("#admin").hide(1);
+      }
+
+    });
+  $(".home").on("click", function () {
+      if ($(window).width() > 1200) {
+        $("#ham").hide(1);
+        $(".registration").show(1);
+        $(".mid").show(1);
+        $("#close").hide(1);
+        $(".ham-menu-item").hide(200);
+        $("#student").show(1);
+        $("#admin").hide(1);
+      }
+      else{
+        $("#ham").show(1);
+        $(".registration").show(1);
+        $(".mid").show(1);
+        $("#close").hide(1);
+        $(".ham-menu-item").hide(200);
+        $("#student").show(1);
+        $("#admin").hide(1);
+      }
+
+    });
   $(".admin").on("click", function () {
     $("#student").hide(1);
     $("#admin").show(1);
