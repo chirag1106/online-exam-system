@@ -14,6 +14,9 @@
 <?php 
     require_once("./inc/navbar.php");
 ?>
+    <div class="notice-banner" style="padding:10px; margin:5px; color:red;">
+        <marquee behavior="scroll" direction="left"><span style="color: blue;">NOTICE :</span> Site is in under maintainenace, Work is in progress.</marquee>
+    </div>
     <div class="section">
         <div class="feed-container container">
             <center><h4>"Your feedback is valueable to us."</h4></center>
