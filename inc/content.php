@@ -14,8 +14,11 @@
           </div>
         </div>
         <div class="row">
-          <input type="checkbox" name="remember-me">
-          <label for="remeber-me">Remember Me</label>
+          <div  class="col">
+            <input type="checkbox" name="remember-me">
+            <label for="remeber-me">Remember Me</label>
+            <a style="margin-left:60px" href="">Forgot password?</a>
+          </div>
         </div>
         <div class="row">
           <div class="col">
@@ -44,6 +47,14 @@
           </div>
         </div>
         <div class="row">
+
+          <div  class="col">
+            <input type="checkbox" name="remember-me">
+            <label for="remeber-me">Remember Me</label>
+            <a style="margin-left:60px" href="">Forgot password?</a>
+          </div>
+        </div>
+          <div class="row">
           <input type="submit" name="submit" value="Log In">
         </div>
       </form>

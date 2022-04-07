@@ -26,6 +26,9 @@ body{
     scrollbar-width: none;
     background-color: rgb(245, 245, 245);
 }
+a{
+  text-decoration: none;
+}
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -148,6 +151,7 @@ body{
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
   }
+
   
   @keyframes gradient {
     0% {
@@ -161,8 +165,7 @@ body{
     }
   }
 
-
-
+  
 
 #admin{
   display: none;
@@ -328,6 +331,7 @@ input[type=text]:focus, select, [type=number]:focus {
 
   
   .col {
+    font-size: x-small;
     float: left;
     width: 100%;
     margin-top: 6px;
@@ -349,20 +353,165 @@ input[type=text]:focus, select, [type=number]:focus {
     /* border-right:2px dashed #fff; */
   
   }
+  .ham-account{
+    /* width:60%; */
+    right:0px;
+    border-left:2px solid #d61616;
+    height:100%;
+    box-shadow:none;
+    display:none;
+    top:85px;
+  }
+  #close{
+    z-index: 50000 !important;
+  }
+
+
+/* account.php */
+.section-acc{
+  height: 100%;
+  overflow-y:scroll;
+  z-index: 100;
+  justify-content: center;
+  /* align-items: center; */
+  /* flex-direction: column; */
+  display: flex;
+  padding:1px 20px;
+  height:80vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.sub-menu{
+  z-index: 50;
+  padding-left:50px ;
+  position: absolute;
+  width: 100vw;
+  width: 100%;
+  left: 0%;
+  height: 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #d61616 ;
+}
+.sub-menu ul{
+  color: #27282a;
+flex-direction: row;
+list-style: none;
+text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.sub-menu li{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 15px 15px;
+  margin-right: 30px;
+}
+.sub-menu li img{
+  width: 15px;
+  height: 15px;
+}
+.sub-menu a{
+  color: #9a0942;
+}
+.sub-menu a:active{
+  color: #000;
+}
+.sub-menu-link:hover{
+  background-color: darkgray;
+}
+#sign-out:active{
+  box-shadow: 0px 0px 5px inset #000;
+}
+#sign-out img{ 
+  width: 24px;
+  margin-right: 10px;
+  height: auto;
+}
+#sign-out{
+  display: flex;
+  align-items: center;
+  margin:20px 0px;
+  padding:10px 20px;
+  font-size: medium;
+  background: none ;
+  border: none;
+  box-shadow: -1px -1px 5px #000;
+  text-align: right;
+}
+
+.home-index{
+  box-shadow: 1px 1px 10px 1px #000;
+    background-color: #fff;
+    margin: 0%;
+    width: 80%;
+    top: 70px;
+    position: relative;
+    height: 65vh;
+    border-radius: 5px;
+    border: 1px solid #f23030;
+    padding:  20px 20px 15px 20px;
+}
+
+
+
+
 
   @media screen and (max-width: 1200px) {
     .ham-menu{
       display: block;
+    }
+    .sub{
+      display: none !important;
+    }
+    .home-index{
+      width: 90%;
+    }
+  .ham-account{
+      width: 30%;
     }
     .nav ul{
       display:none;
     }
   }
   @media screen and (max-width: 660px) {
-    .logo{
+    .logo img{
+      margin-top: 30px ;
       width:100%;
     }
-
+    .ham-account{
+      top:120px;
+      width: 40%;
+    }
+    
+    .section-acc::-webkit-scrollbar{
+      display: hidden;
+    }
+    .section-acc{
+      padding: 1px 0px;
+      /* background: none; */
+    }
+    .home-index{
+      width: 100%;
+      z-index: 1;
+    }
+    #sign-out{
+      display: none;
+    }
+    #sign-out-icon:hover{
+      transform: scale(1.1);
+    }
+    #sign-out-icon{
+      width: 32px;
+      padding: 10px 50px;
+      margin: 30px;
+      /* box-shadow: 1px 1px 5px #000; */
+      background: none;
+      border: none;
+      height: auto;
+      display: block !important;
+    }
     .mid{
       margin: 10px;
       height: 1%;
@@ -396,7 +545,13 @@ input[type=text]:focus, select, [type=number]:focus {
     }
   }
   
-
+@media screen and (max-width:460px) {
+  .logo img{
+    margin-top: 30px ;
+    width:200px !important;
+    /* height: auto; */
+  }
+}
 
 /* feedback started */
 
