@@ -14,16 +14,22 @@ if (isset($_POST['stu-email']) && isset($_POST['stu-password']) && !empty($_POST
 	echo 'Enter Your Email Id';
 	exit();
 }
-$password = md5($password);
+// if(isset($_COOKIE['stu-password'])){
+// 	// $password = 
+// }
+// else{
+	$password = md5($password);
+// }
 $stmt = $con->prepare('SELECT * FROM user WHERE email = ? and password = ?');
 $stmt->bind_param('ss', $email, $password);
 $stmt->execute();
 $result  = $stmt->get_result();
 $count = $result->num_rows;
 if ($count == 1) {
-	while ($row = mysqli_fetch_assoc($result)) {
+	// while ($row = mysqli_fetch_assoc($result)) {
+		$row = mysqli_fetch_assoc($result);
 		$name = $row['name'];
-	}
+	// }
 	$_SESSION['name'] = $name;
 	$_SESSION['email'] = $email;
 	if(!empty($_POST['remember-me'])){
