@@ -133,9 +133,13 @@ a{
   border-bottom: 1px solid #F23030;
 }
 .nav ul li{
-  width:50%;
-  padding-left:10px;
+  /* width:50%; */
+  /* padding-left:10px; */
   list-style: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 5px;
 }
 .section{
     height: 100%;
