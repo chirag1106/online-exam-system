@@ -12,18 +12,18 @@
         </h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off" required>
+            <input type="text" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['stu-email'])){echo $_COOKIE['stu-email'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="password" id="password" name="stu-password" placeholder="Enter Your Password" autocomplete="off" required>
+            <input type="password" id="password" name="stu-password" placeholder="Enter Your Password" autocomplete="off" value="<?php if(isset($_COOKIE['stu-password'])){echo $_COOKIE['stu-password'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <div class="checkbox" >
-              <input type="checkbox" name="remember-me">
+              <input type="checkbox" name="remember-me" <?php if(isset($_COOKIE['stu-email'])){ ?> checked <?php } ?>>
               <label for="remeber-me">Remember Me</label>
               <a style="margin-left:60px" href="#">Forgot password?</a>
             </div>
@@ -51,17 +51,17 @@
         </h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="admin-email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off" required>
+            <input type="text" id="admin-email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['admin-email'])){echo $_COOKIE['admin-email'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="password" id="admin-password" name="admin-password" placeholder="Enter Your Password" autocomplete="off" required>
+            <input type="password" id="admin-password" name="admin-password" placeholder="Enter Your Password" autocomplete="off" value="<?php if(isset($_COOKIE['admin-password'])){echo $_COOKIE['admin-password'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="checkbox" name="remember-me">
+            <input type="checkbox" name="remember-me" <?php if(isset($_COOKIE['admin-email'])){ ?> checked <?php } ?>>
             <label for="remeber-me">Remember Me</label>
             <a style="margin-left:60px" href="#">Forgot password?</a>
           </div>

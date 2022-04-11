@@ -7,17 +7,16 @@ if (isset($_SESSION['email'])) {
 require_once './dbConnection.php';
 require_once './helperFuncs.php';
 
-if(isset($_POST['stu-email']) && isset($_POST['stu-password']) && !empty($_POST['stu-email']) && !empty($_POST['stu-password']) ){
+if (isset($_POST['stu-email']) && isset($_POST['stu-password']) && !empty($_POST['stu-email']) && !empty($_POST['stu-password'])) {
 	$email = test_input($_POST['stu-email']);
 	$password = test_input($_POST['stu-password']);
-}
-else{
+} else {
 	echo 'Enter Your Email Id';
 	exit();
 }
 $password = md5($password);
 $stmt = $con->prepare('SELECT * FROM user WHERE email = ? and password = ?');
-$stmt->bind_param('ss',$email,$password);
+$stmt->bind_param('ss', $email, $password);
 $stmt->execute();
 $result  = $stmt->get_result();
 $count = $result->num_rows;
@@ -27,10 +26,12 @@ if ($count == 1) {
 	}
 	$_SESSION['name'] = $name;
 	$_SESSION['email'] = $email;
+	if(!empty($_POST['remember-me'])){
+        setcookie('stu-email',$email,time()+(30*24*60*60),'/');
+    	setcookie('stu-password',$password,time()+(30*24*60*60),'/');
+    }
 	echo 'login';
-} 
-else
-{
+} else {
 	echo 'Wrong Username or Password';
 	exit();
 }
