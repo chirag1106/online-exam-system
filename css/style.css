@@ -253,18 +253,19 @@ a{
 
 /* form */
 #err_report{
+  margin: 5px 0px;
   display: none;
-  padding: 5px;
+  padding: 10px 0px;
   color: red;
   font-size: 13px;
-  line-height: 5px;
+  /* line-height: 5px; */
 }
 #admin_err_report{
+  margin: 5px 0px;
   display: none;
-  padding: 5px;
+  padding: 10px 0px;
   color: red;
   font-size: 13px;
-  line-height: 5px;
 }
 input[type=text], select, [type=number] {
     background-color: rgb(230, 230, 230);
@@ -337,7 +338,7 @@ input[type=text]:focus, select, [type=number]:focus {
     box-shadow: 1px 1px 10px 1px #000;
     /* background-color: #9a0942; */
     background-color: #fff;
-    width: 300px;
+    width: 350px;
     border-radius: 5px;
     border: 1px solid #f23030;
     padding:  20px 20px 15px 20px;
