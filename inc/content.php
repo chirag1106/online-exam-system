@@ -21,10 +21,12 @@
           </div>
         </div>
         <div class="row">
-          <div  class="col">
-            <input type="checkbox" name="remember-me">
-            <label for="remeber-me">Remember Me</label>
-            <a style="margin-left:60px" href="">Forgot password?</a>
+          <div class="col">
+            <div class="checkbox" >
+              <input type="checkbox" name="remember-me">
+              <label for="remeber-me">Remember Me</label>
+              <a style="margin-left:60px" href="#">Forgot password?</a>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -41,7 +43,7 @@
 
     <!-- admin-login  -->
     <div id="admin" class="container">
-      <form method="post" action="./online-examination-systen-in-php-master-1/admin.php?q=index.php">
+      <form method="post" action="#" id="admin-login">
         <h1>
           <center>Log In<br>
             <h6>(Administrator)</h6>
@@ -49,24 +51,28 @@
         </h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off">
+            <input type="text" id="admin-email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" id="password" name="admin-password" placeholder="Enter Your Password" autocomplete="off">
+            <input type="password" id="admin-password" name="admin-password" placeholder="Enter Your Password" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
-
-          <div  class="col">
+          <div class="col">
             <input type="checkbox" name="remember-me">
             <label for="remeber-me">Remember Me</label>
-            <a style="margin-left:60px" href="">Forgot password?</a>
+            <a style="margin-left:60px" href="#">Forgot password?</a>
           </div>
         </div>
-          <div class="row">
-          <input type="submit" name="submit" value="Log In">
+        <div class="row">
+          <div class="col">
+            <span id="admin_err_report"></span>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" name="submit" id="admin-submit" value="Log In">
         </div>
       </form>
     </div>

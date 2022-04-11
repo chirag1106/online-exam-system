@@ -251,6 +251,13 @@ a{
   font-size: 13px;
   line-height: 5px;
 }
+#admin_err_report{
+  display: none;
+  padding: 5px;
+  color: red;
+  font-size: 13px;
+  line-height: 5px;
+}
 input[type=text], select, [type=number] {
     background-color: rgb(230, 230, 230);
     border:none;

@@ -100,7 +100,7 @@ $(document).ready(function () {
       e.preventDefault();
       $("#stu-submit").val("Please Wait...");
       $.ajax({
-        url: "./online-examination-systen-in-php-master-1/login.php?q=index.php",
+        url: "./online-examination-systen-in-php-master-1/login.php",
         type: "POST",
         data: $("#student-login").serialize(),
         success: function (response) 
@@ -124,8 +124,30 @@ $(document).ready(function () {
             }
             else
             {
-                $('#err_report').css('display','block').text('* '+response);
+              $('#err_report').css('display','block').text('* '+response);
             }
+        }
+      });
+    }
+  });
+
+  $('#admin-submit').click( function(e){
+    if ($("#admin-login")[0].checkValidity()) 
+    {
+      e.preventDefault();
+      $("#admin-submit").val("Please Wait...");
+      $.ajax({
+        type:"post",
+        url:"./online-examination-systen-in-php-master-1/admin.php",
+        data:$("#admin-login").serialize(),
+        success: function(response){
+          $("#admin-submit").val("Log In");
+          if (response === "login"){
+            window.location.href = "./online-examination-systen-in-php-master-1/dash.php?q=0";
+          }
+          else{
+            $('#admin_err_report').css('display','block').text('* '+response);
+          }
         }
       });
     }

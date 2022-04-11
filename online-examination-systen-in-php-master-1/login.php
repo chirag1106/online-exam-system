@@ -7,14 +7,6 @@ if (isset($_SESSION['email'])) {
 require_once './dbConnection.php';
 require_once './helperFuncs.php';
 
-if (isset($_GET['q']) && !empty($_GET['q'])){
-	$ref = $_GET['q'];
-}
-else{
-	header("location:./index.php");
-	exit();
-}
-
 if(isset($_POST['stu-email']) && isset($_POST['stu-password']) && !empty($_POST['stu-email']) && !empty($_POST['stu-password']) ){
 	$email = test_input($_POST['stu-email']);
 	$password = test_input($_POST['stu-password']);
@@ -35,7 +27,6 @@ if ($count == 1) {
 	}
 	$_SESSION['name'] = $name;
 	$_SESSION['email'] = $email;
-	// header('location:account.php?q=1');
 	echo 'login';
 } 
 else
