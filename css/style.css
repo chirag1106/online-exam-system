@@ -58,6 +58,8 @@ a{
     width: 100vw;
     border-bottom: 3px solid #F23030;
     box-shadow: 1px 1px 5px 1px black;
+    align-items: center;
+    align-content: center;
 }
 .logo{
   min-width: 40%;
@@ -70,7 +72,7 @@ a{
 }
 
 .ham-menu{
-  margin-top:20px ;
+  /* margin-top:20px ; */
   margin-right:30px ;
   display: none;
 }
@@ -338,7 +340,7 @@ input[type=text]:focus, select, [type=number]:focus {
     box-shadow: 1px 1px 10px 1px #000;
     /* background-color: #9a0942; */
     background-color: #fff;
-    width: 350px;
+    width: 330px;
     border-radius: 5px;
     border: 1px solid #f23030;
     padding:  20px 20px 15px 20px;
