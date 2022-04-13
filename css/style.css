@@ -60,7 +60,7 @@ a{
     box-shadow: 1px 1px 5px 1px black;
 }
 .logo{
-  width: 40%;
+  min-width: 40%;
   /* display: inline; */
 }
 .logo img {
@@ -85,7 +85,7 @@ a{
   /* align-items: center; */
   position: absolute;
   /* right:0px; */
-  top:85px;
+  /* top:85px; */
   width:100vw;
   height:370px;
 }
@@ -529,7 +529,7 @@ text-decoration: none;
       display: block !important;
     }
     .mid{
-      margin: 10px;
+      margin: 25px;
       height: 1%;
       flex-direction: row;
       border-left: none;
@@ -563,7 +563,7 @@ text-decoration: none;
   
 @media screen and (max-width:460px) {
   .logo img{
-    margin-top: 30px ;
+    /* margin-top: 30px ; */
     width:200px !important;
     /* height: auto; */
   }
