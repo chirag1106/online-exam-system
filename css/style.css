@@ -185,6 +185,11 @@ a {
   align-content: center;
   padding: 5px;
 }
+.dev{
+  padding: 0px !important;
+  min-height: 100vh !important;
+  background: none !important;
+}
 .section {
   height: 100%;
   /* overflow-y:scroll; */
@@ -221,22 +226,83 @@ a {
 }
 
 .profiles {
-  width: 90%;
-  padding: 20px;
+  /* height: 100%; */
+  width: 100%;
+  /* padding: 20px; */
   display: flex;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   color: #fff;
+  height: 400px;
   text-shadow: 1px 1px 5px #27282a;
   border-radius: 10px;
-  width: 45%;
+  width: 350px;
+  margin: 100px 20px 50px 20px ;
+  
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
-
+.red{
+  display: none !important;
+  border-color: #d61616 !important;
+  margin: 50px 0px 80px !important;
+}
+.img-out{
+  position: relative;
+  top: -120px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+.profile img{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+}
+.social-links{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 10px; 
+}
+.social-links button:hover{
+  transition: box-shadow 0.3s cubic-bezier(0.21, 0.68, 0.09, 0.27), transform 0.2s linear;
+box-shadow: 0px 20px 30px -13px #000;
+transform: translateY(-2px) scale(1.03);
+}
+.social-links button:active{
+  box-shadow: 0 10px 10px -6px #d61b59;
+  transform: translateY(-1px);
+}
+.social-links button{
+  width:32px;
+  height:32px;
+  /* padding:4px 5px; */
+  margin: 10px; 
+  border: none;
+  box-shadow: 1px 1px 10px -2px #000;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.social-links img{
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width:32px;
+  height:32px;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -537,7 +603,17 @@ input[type="button"]:hover {
     display: none;
   }
 }
+
 @media screen and (max-width: 660px) {
+  .red{
+    display: block !important;
+  }
+  .profiles{
+    flex-direction: column;
+    margin-top: 20px;
+    /* justify-content: space-evenly; */
+    align-items: center;
+  }
   .logo img {
     /* margin-top: 30px ; */
     width: 100%;

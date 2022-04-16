@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="./menu.js" type="text/javascript"></script>
     <title>Document</title>
@@ -12,16 +12,49 @@
 <body>
     <?php require_once("./inc/navbar.php"); ?>
     
-    <div class="section">
+    <div class="section dev">
         <div class="profiles">
             <div class="profile ">
-                <img src="" alt="">
+                <div class="img-out">
+                    <img src="./images/developer.png" alt="">
+                </div>
                 <center><h3>Chirag Gupta</h3></center>
+                <div class="social-links">
+                            <button>
+                                <a  href="https://www.github.com/chirag1106"><img  src="./images/github.png" alt="Github"></a>
+
+                            </button>
+                            <button>
+                                <img src="./images/instagram.png" alt="Instagram">
+
+                            </button>
+                            <button>
+                                <img src="./images/linkedin.png" alt="LinkedIn">
+
+                            </button>
+                </div>
             </div>
+            <!-- <div class="mid red"></div> -->
 
             <div class="profile">
-                <img src="" alt="">
+                <div class="img-out">
+                    <img src="./images/developer.png" alt="">
+                </div>
                 <center><h3>Vikrant Tanwar</h3></center>
+                <div class="social-links">
+                            <button>
+                                <a  href="https://www.github.com/Tanwar2000"><img  src="./images/github.png" alt="Github"></a>
+
+                            </button>
+                            <button>
+                                <img src="./images/instagram.png" alt="Instagram">
+
+                            </button>
+                            <button>
+                                <img src="./images/linkedin.png" alt="LinkedIn">
+
+                            </button>
+                </div>
             </div>
         </div>
     </div>
