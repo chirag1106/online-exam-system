@@ -6,11 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="./menu.js" type="text/javascript"></script>
+    <script src="./js/menu.js" type="text/javascript"></script>
     <title>Document</title>
 </head>
 <body>
-    <?php require_once("./inc/navbar.php"); ?>
+<nav class="nav">
+
+    <div class="logo">
+      <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions">
+    </div>
+
+    <ul id="navbar">
+      <li><a class="home" href="index.php"><img src="./images/home.png" alt="Home"></a>
+      <a class="menu-item ham-home" href="index.php">Home</a></li>
+      <li><a class="developer" href="javascript:void(0);"><img src="./images/developer.png" alt="Developer"></a>
+      <a class="developer" href="javascript:void(0);">Developer</a></li>
+      <li><a class="feedback" href="feedback.php" target="_blank"><img src="./images/feedback.png"  alt="Feedback"></a>
+      <a class="feedback" href="feedback.php" target="_blank" >Feedback</a></li>
+    </ul>
+
+    <div id="close" style="display:none" class="ham-menu">
+      <img src="./images/close.png" alt="">
+    </div>
+    <div id="ham" class="ham-menu">
+      <img src="./images/menu.png" alt="">
+    </div>
+  </nav>
+  <div class="ham-menu-item" style="display:none">
+    <ul>
+      <li><a class="ham-home" href="index.php"><img src="./images/home.png" alt="Home"></a></li>
+      <li><a class="menu-item ham-home" href="index.php">Home</a></li>
+      
+      <li><a class="ham-developer" href="javascript:void(0);"><img src="./images/developer.png" alt="Developer"></a></li>
+      <li><a class="menu-item ham-developer" href="javascript:void(0);">Developer</a></li>
+      <li><a class="ham-feedback" href="javascript:void(0);"><img src="./images/feedback.png" alt="Feedback"></a></li>
+      <li><a class="menu-item ham-feedback" href="feedback.php">Feedback</a></li>
+    </ul>
+  </div>
+  
     
     <div class="section dev">
         <div class="profiles">
