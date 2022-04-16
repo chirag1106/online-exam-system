@@ -101,6 +101,7 @@ $(document).ready(function () {
         success: function (response) {
           $("#stu-submit").val("Log In");
           if (response === "login") {
+            $("#student-login")[0].reset();
             var window_open = window.open(
               "./online-examination-systen-in-php-master-1/account.php?q=1",
               "_blank",
@@ -156,13 +157,43 @@ $(document).ready(function () {
           if (response === "login") {
             window.location.href =
               "./online-examination-systen-in-php-master-1/dash.php?q=0";
+              $("#admin-login")[0].reset();
           } else {
-            $("#admin_err_report")
-              .css("display", "block")
-              .text("* " + response);
+            $("#admin_err_report").css("display", "block").text("* " + response);
           }
         },
       });
     }
   });
+
+  $("#user_signup").click(function (e){
+    if($('#user_err_report').css("display") == "block"){
+      $('#user_err_report').css('display', 'none');
+    }
+    else if($('#user_success_report').css("display") == "block"){
+      $('#user_success_report').css('display', 'none');
+    }
+    if ($("#usignup")[0].checkValidity()){
+      e.preventDefault();
+      // console.log("chirag123");
+      $("#user_signup").val("Please Wait...");
+      $.ajax({
+        type:"post",
+        url:"./online-examination-systen-in-php-master-1/sign.php",
+        data: $("#usignup").serialize(),
+        success: function(response){
+          $("#user_signup").val("Sign Up");
+          if(response == 'Registered Successfully'){
+            $('#user_success_report').css("display", "block").text(response);
+            $("#usignup")[0].reset();
+          }
+          else{
+            $('#user_err_report').css("display", "block").text("* "+response);
+            // $("#usignup")[0].reset();
+          }
+        }
+      });
+    }
+  });
+
 });

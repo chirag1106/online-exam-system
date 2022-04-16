@@ -6,39 +6,35 @@ require_once './helperFuncs.php';
 if (isset($_POST['admin-email']) && isset($_POST['admin-password']) && !empty($_POST['admin-email']) && !empty($_POST['admin-password'])) {
     $email = test_input($_POST['admin-email']);
     $password = test_input($_POST['admin-password']);
-} else {
-    echo 'Enter valid Admin Profile';
-    exit();
-}
-
-$stmt = $con->prepare('SELECT * FROM admin WHERE email = ? and password = ?');
-$stmt->bind_param('ss', $email, $password);
-$stmt->execute();
-$result = $stmt->get_result();
-$count = $result->num_rows;
-// $count=mysqli_num_rows($result);
-if ($count == 1) {
-    session_start();
-    if (isset($_SESSION['email'])) {
-        session_unset();
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        echo 'Enter valid Admin Profile';
+        exit();
     }
-    $_SESSION["name"] = 'Admin';
-    $_SESSION["key"] = 'sunny7785068889';
-    $_SESSION["email"] = $email;
-    
-    if(!empty($_POST['remember-me'])){
-        setcookie('admin-email',$email,time()+(30*24*60*60),'/');
-        setcookie('admin-password',$password,time()+(30*24*60*60),'/');
-    }
-    // else{
-    //     if(!isset($_COOKIE['admin-email'])){setcookie('admin-email','',1,'/');}
-    //     if(!isset($_COOKIE['admin-password'])){setcookie('admin-password','',1,'/');}
-    // }
-    
-    echo 'login';
-    // header("location:dash.php?q=0");
-} else {
-    // header("location:$ref?w=Warning : Access denied");
-    echo 'Access denied';
-    exit();
+    $stmt = $con->prepare('SELECT * FROM admin WHERE email = ? and password = ?');
+    $stmt->bind_param('ss', $email, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $count = $result->num_rows;
+    if ($count == 1) {
+        session_start();
+        if (isset($_SESSION['email'])) {
+            session_unset();
+        }
+        $_SESSION["name"] = 'Admin';
+        $_SESSION["key"] = 'sunny7785068889';
+        $_SESSION["email"] = $email;
+        
+        if(!empty($_POST['remember-me'])){
+            setcookie('ae',$email,time()+(30*24*60*60),'/');
+            setcookie('ap',$password,time()+(30*24*60*60),'/');
+        }
+        echo 'login';
+        } else {
+            echo 'Access denied';
+            exit();
+        }
 }
+else{
+    header("location: ../index.php");
+}
+        

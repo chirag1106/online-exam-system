@@ -12,18 +12,18 @@
         </h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['stu-email'])){echo $_COOKIE['stu-email'];}else{echo '';} ?>" required>
+            <input type="text" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['se'])){echo $_COOKIE['se'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="password" id="password" name="stu-password" placeholder="Enter Your Password" autocomplete="off" value="<?php if(isset($_COOKIE['stu-password'])){echo $_COOKIE['stu-password'];}else{echo '';} ?>" required>
+            <input type="password" id="password" name="stu-password" placeholder="Enter Your Password" autocomplete="off" value="<?php if(isset($_COOKIE['sp'])){echo $_COOKIE['sp'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <div class="checkbox" >
-              <input type="checkbox" name="remember-me" <?php if(isset($_COOKIE['stu-email'])){ ?> checked <?php } ?>>
+              <input type="checkbox" name="remember-me" <?php if(isset($_COOKIE['se'])){ ?> checked <?php } ?>>
               <label for="remeber-me">Remember Me</label>
               <a style="margin-left:60px" href="#">Forgot password?</a>
             </div>
@@ -46,22 +46,22 @@
       <form method="post" action="#" id="admin-login">
         <h1>
           <center>Log In<br>
-            <h6>(Administrator)</h6>
+            <h6>(Faculty)</h6>
           </center>
         </h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="admin-email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['admin-email'])){echo $_COOKIE['admin-email'];}else{echo '';} ?>" required>
+            <input type="text" id="admin-email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['ae'])){echo $_COOKIE['ae'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="password" id="admin-password" name="admin-password" placeholder="Enter Your Password" autocomplete="off" value="<?php if(isset($_COOKIE['admin-password'])){echo $_COOKIE['admin-password'];}else{echo '';} ?>" required>
+            <input type="password" id="admin-password" name="admin-password" placeholder="Enter Your Password" autocomplete="off" value="<?php if(isset($_COOKIE['ap'])){echo $_COOKIE['ap'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="checkbox" name="remember-me" <?php if(isset($_COOKIE['admin-email'])){ ?> checked <?php } ?>>
+            <input type="checkbox" name="remember-me" <?php if(isset($_COOKIE['ae'])){ ?> checked <?php } ?>>
             <label for="remeber-me">Remember Me</label>
             <a style="margin-left:60px" href="#">Forgot password?</a>
           </div>
@@ -82,23 +82,28 @@
 
     <!-- student reg start -->
     <div class="container registration">
-      <form method="POST" action="#">
+      <form method="POST" action="" id="usignup">
         <h1>
           <center>Sign Up</center>
         </h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="full_name" name="name" placeholder="Your Full Name" autocomplete="off">
+            <input type="text" id="uname" name="uname" placeholder="Your Full Name" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" id="email" name="email" placeholder="Your Email Id" autocomplete="off">
+            <input type="text" id="uemail" name="uemail" placeholder="Your Email Id" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <select id="country" name="Gender">
+            <input type="text" id="ucollege" name="ucollege"  placeholder="Enter College Name" autocomplete="off" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <select id="ugender" name="ugender" required >
               <option value="#">Select Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -108,21 +113,31 @@
         </div>
         <div class="row">
           <div class="col">
-            <input type="number" id="Mobile_no" name="phone" placeholder="Enter Your Mobile Number" autocomplete="off">
+            <input type="number" id="uphoneNo" name="uphoneno" placeholder="Enter Your Mobile Number" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="password" id="password" name="password" placeholder="Enter Your Password" autocomplete="off">
+            <input type="password" id="upassword" name="upassword" placeholder="Enter Your Password" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="password" id="confirm_password" name="cpassword" placeholder="Confirm Password" autocomplete="off">
+            <input type="password" id="ucpassword" name="ucpassword" placeholder="Confirm Password" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
-          <input type="submit" value="Sign Up">
+          <div class="col">
+            <span id="user_err_report"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <span id="user_success_report"></span>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Sign Up" id="user_signup" name="usubmit">
         </div>
       </form>
     </div>

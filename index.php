@@ -6,15 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DGI | TEST YOUR SKILL </title>
   <link rel="stylesheet" href="./css/style.css">
+  <link href="./css/fontawesome/css/all.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="./js/menu.js" type="text/javascript"></script>
-
-  <?php
-  // if (isset($_GET['w']) && !empty($_GET['w'])) {
-  //   echo '<script>alert("' . $_GET['w'] . '");</script>';
-  // }
-  ?>
-
   <script>
     function validateForm() {
       var y = document.forms["form"]["name"].value;
@@ -53,12 +47,23 @@
   </script>
 </head>
 
-<body>
+<body onload="rloader()">
+  <div id="loader">
+    <div id="loader-img"></div>
+    <span id="loader-content">Dronacharya Group Of Institutions</span>
+  </div>
   <?php
   require_once("./inc/navbar.php");
   require_once("./inc/content.php");
   require_once("./inc/footer.php");
   ?>
+  <script>
+    function rloader(){
+      var loader = document.getElementById("loader");
+      // if(loader.style.display == "block")
+      setTimeout(() => {loader.style.display = "none";},3000);
+    }
+  </script>
 </body>
 
 </html>

@@ -23,8 +23,13 @@ if (isset($_SESSION['key'])) {
 }
 //remove quiz
 if (isset($_SESSION['key'])) {
-  if (@$_GET['q'] == 'rmquiz' && $_SESSION['key'] == 'sunny7785068889') {
-    $eid = @$_GET['eid'];
+  if (isset($_GET['q']) && $_GET['q'] == 'rmquiz' && $_SESSION['key'] == 'sunny7785068889') {
+    if(isset($_GET['eid']) && !empty($_GET['eid']) ) { 
+      $eid =  $_GET['eid'];
+    }
+    else{
+      $eid = "";
+    }
     $result = mysqli_query($con, "SELECT * FROM questions WHERE eid='$eid' ") or die('Error');
     while ($row = mysqli_fetch_array($result)) {
       $qid = $row['qid'];

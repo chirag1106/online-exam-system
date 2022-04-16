@@ -6,7 +6,7 @@
       <li><a class="home" href="javascript:void(0)"><img src="./images/home.png" alt="Home"></a>
       <a class="menu-item ham-home" href="javascript:void(0)">Home</a></li>
       <li><a class="admin" href="javascript:void(0);"><img src="./images/admin.png" alt="Admin"></a>
-      <a class="admin" href="javascript:void(0);">Admin</a></li>
+      <a class="admin" href="javascript:void(0);">Faculty</a></li>
       <li><a class="developer" href="javascript:void(0);"><img src="./images/developer.png" alt="Developer"></a>
       <a class="developer" href="javascript:void(0);">Developer</a></li>
       <li><a class="feedback" href="feedback.php" target="_blank"><img src="./images/feedback.png"  alt="Feedback"></a>
@@ -25,7 +25,7 @@
       <li><a class="ham-home" href="javascript:void(0)"><img src="./images/home.png" alt="Home"></a></li>
       <li><a class="menu-item ham-home" href="javascript:void(0)">Home</a></li>
       <li><a class="ham-admin" href="javascript:void(0);"><img src="./images/admin.png" alt="Admin"></a></li>
-      <li><a class="menu-item ham-admin" href="javascript:void(0);">Admin</a></li>
+      <li><a class="menu-item ham-admin" href="javascript:void(0);">Faculty</a></li>
       <li><a class="ham-developer" href="javascript:void(0);"><img src="./images/developer.png" alt="Developer"></a></li>
       <li><a class="menu-item ham-developer" href="javascript:void(0);">Developer</a></li>
       <li><a class="ham-feedback" href="javascript:void(0);"><img src="./images/feedback.png" alt="Feedback"></a></li>
