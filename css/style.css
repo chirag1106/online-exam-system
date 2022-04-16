@@ -65,7 +65,7 @@ body {
   z-index: 9999999;
 }
 #loader-content {
-  position: absolute;
+  position: fixed;
   z-index: 99999999;
   /* height: 100vh; */
   /* width: 100%; */

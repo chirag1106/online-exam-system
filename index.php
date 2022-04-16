@@ -50,7 +50,7 @@
 <body onload="rloader()">
   <div id="loader">
     <div id="loader-img"></div>
-    <span id="loader-content">Dronacharya Group Of Institutions</span>
+    <span id="loader-content"><center>Dronacharya Group Of Institutions<center></span>
   </div>
   <?php
   require_once("./inc/navbar.php");
