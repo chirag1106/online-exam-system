@@ -60,7 +60,6 @@
   <script>
     function rloader(){
       var loader = document.getElementById("loader");
-      // if(loader.style.display == "block")
       setTimeout(() => {loader.style.display = "none";},3000);
     }
   </script>

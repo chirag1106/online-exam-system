@@ -120,13 +120,13 @@
             // $q12 = mysqli_query($con, "SELECT score FROM history WHERE eid='$eid' AND email='$email'") or die('Error98');
             // $rowcount = mysqli_num_rows($q12);
             // if ($rowcount == 0) {
-              echo '<tr>
+            echo '<tr>
                       <td>' . $c++ . '</td>
                       <td>' . $title . '</td>
                       <td>' . $total . '</td>
                       <td>' . $sahi * $total . '</td>
                       <td>' . $time . '&nbsp;min</td>
-                      <td><input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-onstyle="success" checked></td>
+                      <td><input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-onstyle="success" data-offstyle="danger" checked></td>
 	                  </tr>';
             // } else {
             //   echo '<tr style="color:#99cc32">
@@ -136,7 +136,7 @@
             //           <td>' . $sahi * $total . '</td>
             //           <td>' . $time . '&nbsp;min</td>
             //           <td><input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled"></td>
-	          //         </tr>';
+            //         </tr>';
             // }
           }
           $c = 0;

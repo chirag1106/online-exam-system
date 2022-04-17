@@ -100,21 +100,22 @@ $(document).ready(function () {
         data: $("#student-login").serialize(),
         success: function (response) {
           $("#stu-submit").val("Log In");
-          if (response === "login") {
+          if (response == "login") {
             $("#student-login")[0].reset();
-            var window_open = window.open(
-              "./online-examination-systen-in-php-master-1/account.php?q=1",
-              "_blank",
-              "toolbar=no,scrollbars=yes,resizable=yes,menubar=no,location=no,status=no,titlebar=no",
-              "width=100%,height=100%"
-            );
-            window_open.addEventListener("contextmenu", (event) =>
-              event.preventDefault()
-            );
-            console.log(window);
-            window_open.onkeydown = function () {
-              return false;
-            };
+            window.location.href = "./online-examination-systen-in-php-master-1/account.php?q=1";
+            // var window_open = window.open(
+            //   "./online-examination-systen-in-php-master-1/account.php?q=1",
+            //   "_blank",
+            //   "toolbar=no,scrollbars=yes,resizable=yes,menubar=no,location=no,status=no,titlebar=no",
+            //   "width=100%,height=100%"
+            // );
+            // window_open.addEventListener("contextmenu", (event) =>
+            //   event.preventDefault()
+            // );
+            // console.log(window);
+            // window_open.onkeydown = function () {
+            //   return false;
+            // };
 
             // document.fullscreenEnabled =
             //   document.fullscreenEnabled ||
@@ -150,7 +151,7 @@ $(document).ready(function () {
       $("#admin-submit").val("Please Wait...");
       $.ajax({
         type: "post",
-        url: "./online-examination-systen-in-php-master-1/admin.php",
+        url: "./online-examination-systen-in-php-master-1/faculty_login.php",
         data: $("#admin-login").serialize(),
         success: function (response) {
           $("#admin-submit").val("Log In");
