@@ -8,25 +8,25 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="./js/menu.js" type="text/javascript"></script>
-    <title>Document</title>
+    <title>DGI | Developers</title>
 </head>
 
 <body>
     <nav class="nav">
 
         <div class="logo">
-            <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions">
+            <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions" loading="lazy">
         </div>
 
         <ul id="navbar">
             <li><a class="home" href="index.php"><img src="./images/home.png" alt="Home"></a>
-                <a class="menu-item ham-home" href="index.php">Home</a>
+                <a class="menu-item ham-home" href="./index.php">Home</a>
             </li>
-            <li><a class="developer" href="javascript:void(0);"><img src="./images/developer.png" alt="Developer"></a>
-                <a class="developer" href="javascript:void(0);">Developer</a>
+            <li><a class="developer" href="./developer.php"><img src="./images/developer.png" alt="Developer"></a>
+                <a class="developer" href="./developer.php">Developer</a>
             </li>
-            <li><a class="feedback" href="feedback.php" target="_blank"><img src="./images/feedback.png" alt="Feedback"></a>
-                <a class="feedback" href="feedback.php" target="_blank">Feedback</a>
+            <li><a class="feedback" href="./feedback.php" target="_blank"><img src="./images/feedback.png" alt="Feedback"></a>
+                <a class="feedback" href="./feedback.php" target="_blank">Feedback</a>
             </li>
         </ul>
 
@@ -39,13 +39,13 @@
     </nav>
     <div class="ham-menu-item" style="display:none">
         <ul>
-            <li><a class="ham-home" href="index.php"><img src="./images/home.png" alt="Home"></a></li>
-            <li><a class="menu-item ham-home" href="index.php">Home</a></li>
+            <li><a class="ham-home" href="./index.php"><img src="./images/home.png" alt="Home"></a></li>
+            <li><a class="menu-item ham-home" href="./index.php">Home</a></li>
 
-            <li><a class="ham-developer" href="javascript:void(0);"><img src="./images/developer.png" alt="Developer"></a></li>
-            <li><a class="menu-item ham-developer" href="javascript:void(0);">Developer</a></li>
-            <li><a class="ham-feedback" href="javascript:void(0);"><img src="./images/feedback.png" alt="Feedback"></a></li>
-            <li><a class="menu-item ham-feedback" href="feedback.php">Feedback</a></li>
+            <li><a class="ham-developer" href="./developer.php"><img src="./images/developer.png" alt="Developer"></a></li>
+            <li><a class="menu-item ham-developer" href="./developer.php">Developer</a></li>
+            <li><a class="ham-feedback" href="./feedback.php"><img src="./images/feedback.png" alt="Feedback"></a></li>
+            <li><a class="menu-item ham-feedback" href="./feedback.php">Feedback</a></li>
         </ul>
     </div>
 
