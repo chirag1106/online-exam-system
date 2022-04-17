@@ -13,15 +13,14 @@
 
 <body>
     <nav class="nav">
+
         <div class="logo">
             <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions" loading="lazy">
         </div>
-        <!--  <ul id="navbar">
-            <li><a class="home" href="javascript:void(0)"><img src="../images/home.png" alt="Home"></a>
-                <a class="menu-item ham-home" href="javascript:void(0)">Home</a>
-            </li>
-            <li><a class="admin" href="javascript:void(0);"><img src="../images/admin.png" alt="Admin"></a>
-                <a class="admin" href="javascript:void(0);">Faculty</a>
+
+        <ul id="navbar">
+            <li><a class="home" href="index.php"><img src="../images/home.png" alt="Home"></a>
+                <a class="menu-item ham-home" href="index.php">Home</a>
             </li>
             <li><a class="developer" href="javascript:void(0);"><img src="../images/developer.png" alt="Developer"></a>
                 <a class="developer" href="javascript:void(0);">Developer</a>
@@ -36,20 +35,20 @@
         </div>
         <div id="ham" class="ham-menu">
             <img src="../images/menu.png" alt="">
-        </div>-->
+        </div>
     </nav>
-    <!-- <div class="ham-menu-item" style="display:none"> 
+    <div class="ham-menu-item" style="display:none">
         <ul>
-            <li><a class="ham-home" href="javascript:void(0)"><img src="../images/home.png" alt="Home"></a></li>
-            <li><a class="menu-item ham-home" href="javascript:void(0)">Home</a></li>
-            <li><a class="ham-admin" href="javascript:void(0);"><img src="../images/admin.png" alt="Admin"></a></li>
-            <li><a class="menu-item ham-admin" href="javascript:void(0);">Faculty</a></li>
+            <li><a class="ham-home" href="index.php"><img src="../images/home.png" alt="Home"></a></li>
+            <li><a class="menu-item ham-home" href="index.php">Home</a></li>
+
             <li><a class="ham-developer" href="javascript:void(0);"><img src="../images/developer.png" alt="Developer"></a></li>
             <li><a class="menu-item ham-developer" href="javascript:void(0);">Developer</a></li>
             <li><a class="ham-feedback" href="javascript:void(0);"><img src="../images/feedback.png" alt="Feedback"></a></li>
             <li><a class="menu-item ham-feedback" href="feedback.php">Feedback</a></li>
         </ul>
-    </div> -->
+    </div>
+
     <div class="notice-banner" style="padding:10px; margin:5px; color:red;">
         <marquee behavior="scroll" direction="left"><span style="color: blue;">NOTICE :</span> Site is in under maintainenace, Work is in progress.</marquee>
     </div>
