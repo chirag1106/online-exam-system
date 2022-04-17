@@ -1,6 +1,6 @@
 <nav class="nav">
     <div class="logo">
-      <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions">
+      <img src="https://gnindia.dronacharya.info/images/DGI-Logo.png" alt="Dronacharya Group of Institutions" loading="lazy">
     </div>
     <ul id="navbar">
       <li><a class="home" href="javascript:void(0)"><img src="./images/home.png" alt="Home"></a>
