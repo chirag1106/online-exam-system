@@ -7,7 +7,6 @@ function test_input($data)
     $data = stripslashes($data);
     $data = strip_tags($data);
     $data = htmlspecialchars($data);
-
     return $data;
 }
 
@@ -15,6 +14,16 @@ function getCurrentUserDetails($email)
 {
     global $con;
     $stmt = $con->prepare('SELECT * FROM user WHERE email = ?');
+    $stmt->bind_param('s', $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = mysqli_fetch_assoc($result);
+    return $row;
+}
+function getCurrentFacultyDetails($email)
+{
+    global $con;
+    $stmt = $con->prepare('SELECT * FROM admin WHERE email = ?');
     $stmt->bind_param('s', $email);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -74,6 +83,52 @@ function emailTemplate($subject, $email, $message, $type)
             )
         );
     } else if ($type == 'resetPass') {
+        $template = array(
+            'personalizations' => array(
+                array(
+                    'to' => array(
+                        array(
+                            'email' => $email
+                        )
+                    )
+                )
+            ),
+            'from' => array(
+                'email' => $my_email,
+                'name' => $my_name
+            ),
+            'subject' => $subject,
+            'content' => array(
+                array(
+                    'type' => 'text/html',
+                    'value' => $message
+                )
+            )
+        );
+    } else if ($type == 'register') {
+        $template = array(
+            'personalizations' => array(
+                array(
+                    'to' => array(
+                        array(
+                            'email' => $email
+                        )
+                    )
+                )
+            ),
+            'from' => array(
+                'email' => $my_email,
+                'name' => $my_name
+            ),
+            'subject' => $subject,
+            'content' => array(
+                array(
+                    'type' => 'text/html',
+                    'value' => $message
+                )
+            )
+        );
+    } else if ($type == 'sendCredential') {
         $template = array(
             'personalizations' => array(
                 array(

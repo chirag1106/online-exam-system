@@ -9,8 +9,10 @@ if (isset($_POST['admin-email']) && isset($_POST['admin-password']) && !empty($_
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         echo 'Enter valid Admin Profile';
         exit();
+    }else {
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
     }
-    $stmt = $con->prepare('SELECT * FROM admin WHERE email = ? and password = ?');
+    $stmt = $con->prepare('SELECT * FROM `admin` WHERE `email` = ? and `password` = ?');
     $stmt->bind_param('ss', $email, $password);
     $stmt->execute();
     $result = $stmt->get_result();

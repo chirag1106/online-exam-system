@@ -1,7 +1,7 @@
 <?php
 require_once 'dbConnection.php';
 require_once './helperFuncs.php';
-
+require_once './error.php';
 // print_r($_POST);
 // exit();
 ob_start();
@@ -10,6 +10,7 @@ $name = test_input($_POST['uname']);
 $name = ucwords(strtolower($name));
 $gender = test_input($_POST['ugender']);
 $email = test_input($_POST['uemail']);
+// $email = filter_var($email, FILTER_SANITIZE_EMAIL) ;
 $college = test_input($_POST['ucollege']);
 $phoneNo = test_input($_POST['uphoneno']);
 $phoneNo = (int)$phoneNo;
@@ -19,6 +20,9 @@ $password = test_input($_POST['upassword']);
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo 'Please enter valid email';
     exit();
+}
+else{
+    $email = filter_var($email,FILTER_SANITIZE_EMAIL);
 }
 $loggedUser = getCurrentUserDetails($email);
 // print_r($loggedUser);
