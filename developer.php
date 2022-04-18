@@ -54,7 +54,7 @@
         <div class="profiles">
             <div class="profile ">
                 <div class="img-out">
-                    <img src="./images/developer.png" alt="">
+                    <img src="./images/developer.png" alt="developer">
                 </div>
                 <div class="info">
                     <div class="empty"></div>

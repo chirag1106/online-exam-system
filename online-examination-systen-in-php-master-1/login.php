@@ -6,7 +6,7 @@ if (isset($_SESSION['email'])) {
 
 require_once './dbConnection.php';
 require_once './helperFuncs.php';
-
+require_once './error.php';
 if (isset($_POST['stu-email']) && isset($_POST['stu-password']) && !empty($_POST['stu-email']) && !empty($_POST['stu-password'])) {
 	$email = test_input($_POST['stu-email']);
 	$password = test_input($_POST['stu-password']);
