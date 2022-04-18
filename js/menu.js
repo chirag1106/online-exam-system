@@ -210,6 +210,7 @@ $(document).ready(function () {
         success: function (response) {
           console.log(response);
           if (response == "Registration Successful") {
+            $("#faculty_signup").val("Sign Up");
             if ($("#faculty_err_report").css("display") == "block") {
               $("#faculty_err_report").css("display", "none");
             }
