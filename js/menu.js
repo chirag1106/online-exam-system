@@ -204,8 +204,10 @@ $(document).ready(function () {
     if ($("#fsignup")[0].checkValidity()) {
       e.preventDefault();
       $("#faculty_signup").val("Please Wait...");
+      var phoneNo = $("#fphoneNo").length;
+      console.log(phoneNo);
       // console.log("chirag");
-      if ($("#fphoneNo").length() != 10) {
+      if (phoneNo < 10 || phoneNo > 10) {
         // console.log($("#fphoneNo").val());
         if ($("#faculty_err_report").css("display") == "block") 
         {
