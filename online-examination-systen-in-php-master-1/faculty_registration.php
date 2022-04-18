@@ -29,7 +29,7 @@ if (isset($_POST['femail']) && !empty($_POST['femail'])) {
         exit();
     } else {
         $password = password_hash($password, PASSWORD_BCRYPT);
-        $stmt = $con->prepare('INSERT INTO `admin` (`name`, `email`,`gender`,`phone`,`password`,`email_status`,`admin_status`) VALUES (?, ?, ?, ?, ?, ?, ?)');
+        $stmt = $con->prepare('INSERT INTO `admin` (`name`, `email`,`gender`,`phone`,`password`,`email_status`,`faculty_status`) VALUES (?, ?, ?, ?, ?, ?, ?)');
         // echo var_dump($stmt); exit();
         $stmt->bind_param('sssssii', $name, $email ,$gender, $phoneNo, $password, $emailStatus, $adminStatus);
         $stmt->execute();

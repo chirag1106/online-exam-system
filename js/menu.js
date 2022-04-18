@@ -156,7 +156,7 @@ $(document).ready(function () {
         data: $("#admin-login").serialize(),
         success: function (response) {
           $("#admin-submit").val("Log In");
-          if (response === "login") {
+          if (response == "login") {
             window.location.href =
               "./online-examination-systen-in-php-master-1/dash.php?q=0";
             $("#admin-login")[0].reset();
