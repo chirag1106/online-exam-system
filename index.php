@@ -51,7 +51,9 @@
 <body onload="rloader()">
   <div id="loader">
     <div id="loader-img"></div>
-    <span id="loader-content"><center>Dronacharya Group Of Institutions<center></span>
+    <span id="loader-content">
+      <center>Dronacharya Group Of Institutions<center>
+    </span>
   </div>
   <?php
   require_once("./inc/navbar.php");
@@ -59,9 +61,11 @@
   require_once("./inc/footer.php");
   ?>
   <script>
-    function rloader(){
+    function rloader() {
       var loader = document.getElementById("loader");
-      setTimeout(() => {loader.style.display = "none";},3000);
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 3000);
     }
   </script>
 </body>
