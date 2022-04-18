@@ -20,6 +20,7 @@ function getCurrentUserDetails($email)
     $row = mysqli_fetch_assoc($result);
     return $row;
 }
+
 function getCurrentFacultyDetails($email)
 {
     global $con;
@@ -29,6 +30,19 @@ function getCurrentFacultyDetails($email)
     $result = $stmt->get_result();
     $row = mysqli_fetch_assoc($result);
     return $row;
+}
+
+function getEmailDetails($email, $type)
+{
+    $subject = '';
+    $message = '';
+    $result = sendEmail($subject, $message, $email, $type);
+    if(!$result){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 function sendEmail($subject, $email, $message, $type)

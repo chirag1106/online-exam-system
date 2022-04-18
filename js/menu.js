@@ -191,7 +191,9 @@ $(document).ready(function () {
             if ($("#user_success_report").css("display") == "block") {
               $("#user_success_report").css("display", "none");
             }
-            $("#user_err_report").css("display", "block").text("* " + response);
+            $("#user_err_report")
+              .css("display", "block")
+              .text("* " + response);
           }
         },
       });
@@ -203,27 +205,53 @@ $(document).ready(function () {
       e.preventDefault();
       $("#faculty_signup").val("Please Wait...");
       // console.log("chirag");
-      $.ajax({
-        url: "./online-examination-systen-in-php-master-1/faculty_registration.php",
-        type: "post",
-        data: $("#fsignup").serialize(),
-        success: function (response) {
-          console.log(response);
-          if (response == "Registration Successful") {
+      if ($("#fphoneNo").length() != 10) {
+        // console.log($("#fphoneNo").val());
+        if ($("#faculty_err_report").css("display") == "block") 
+        {
+          $("#faculty_err_report").css("display", "none");
+        }
+        $("#faculty_err_report").css("display", "block").text("* Please enter valid Phone Number");
+        $("#faculty_signup").val("Sign Up");
+      }
+      else if($("#fpassword").val() != $("#fcpassword").val())
+      {
+        console.log("chirag");
+        if ($("#faculty_err_report").css("display") == "block") 
+        {
+          $("#faculty_err_report").css("display", "none");
+        }
+        $("#faculty_err_report").css("display", "block").text("* Confirm Password does not Password");
+        $("#faculty_signup").val("Sign Up");
+      }
+      else 
+      {
+        $.ajax({
+          url: "./online-examination-systen-in-php-master-1/faculty_registration.php",
+          type: "post",
+          data: $("#fsignup").serialize(),
+          success: function (response) {
+            // console.log(response);
             $("#faculty_signup").val("Sign Up");
-            if ($("#faculty_err_report").css("display") == "block") {
-              $("#faculty_err_report").css("display", "none");
+            if (response == "Registration Successful") {
+              if ($("#faculty_err_report").css("display") == "block") {
+                $("#faculty_err_report").css("display", "none");
+              }
+              $("#faculty_success_report")
+                .css("display", "block")
+                .text(response);
+              $("#fsignup")[0].reset();
+            } else {
+              if ($("#faculty_success_report").css("display") == "block") {
+                $("#faculty_success_report").css("display", "none");
+              }
+              $("#faculty_err_report")
+                .css("display", "block")
+                .text("* " + response);
             }
-            $("#faculty_success_report").css("display", "block").text(response);
-            $("#fsignup")[0].reset();
-          } else {
-            if ($("#faculty_success_report").css("display") == "block") {
-              $("#faculty_success_report").css("display", "none");
-            }
-            $("#faculty_err_report").css("display", "block").text("* " + response);
-          }
-        },
-      });
+          },
+        });
+      }
     }
   });
 });

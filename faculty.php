@@ -49,7 +49,7 @@
         </ul>
     </div>
 
-    <div class="notice-banner" style="padding:10px; margin:5px; color:red;">
+    <div class="notice-banner" style="height: 5vh; padding:10px; color:red;">
         <marquee behavior="scroll" direction="left"><span style="color: blue;">NOTICE :</span> Site is in under maintainenace, Work is in progress.</marquee>
     </div>
     <div class="section">
@@ -113,7 +113,7 @@
         </div>
         <!-- student reg end -->
     </div>
-    <div style="padding-top:10px; line-height: 19px;" class="footer">
+    <div class="footer">
         <center>&copy;<script>
                 document.write(new Date().getFullYear())
             </script> All right reserved.<br>Developed and Designed by Chirag Gupta & Vikrant Tanwar</center>
