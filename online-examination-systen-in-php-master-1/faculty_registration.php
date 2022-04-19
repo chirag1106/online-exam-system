@@ -39,13 +39,13 @@ if (isset($_POST['femail']) && !empty($_POST['femail'])) {
             $_SESSION['email'] = $email;
             $_SESSION['name'] = $name;
             // print_r($_SESSION); exit();
-            $response = getEmailDetails($email,'faculty-signup');
-            if($response){
+            // $response = getEmailDetails($email,'faculty-signup');
+            // if($response){
                 echo 'Registration Successful';
-            }
-            else{
-                echo 'Registration Successful, But email cant be send';
-            }
+            // }
+            // else{
+                // echo 'Registration Successful, But email cant be send';
+            // }
         }
         else {
             echo 'Some error Occured';
