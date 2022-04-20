@@ -37,9 +37,11 @@
   require_once("./inc/footer.php");
   ?>
   <script>
-    function rloader(){
+    function rloader() {
       var loader = document.getElementById("loader");
-      setTimeout(() => {loader.style.display = "none";},3000);
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 3000);
     }
   </script>
 </body>
