@@ -34,46 +34,125 @@ body {
   scrollbar-width: none;
   background-color: rgb(245, 245, 245);
 }
-#loader {
-  z-index: 99999999;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+
+/* loader started */
+.loader>span {
+
+  font-size: 130px;
+  font-family: "franklin gothic medium", sans-serif;
+  display: inline-block;
+  animation: flip 2.6s  linear, gradient 5s ease infinite;
+  transform-origin: 0 70%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  background-color: red;
+  background-image: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient1 15s ease infinite;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
-@keyframes gradient1 {
+
+@keyframes gradient {
   0% {
-    background-position: 0% 50%;
+      background-position: 0% 50%;
   }
+
   50% {
-    background-position: 100% 50%;
+      background-position: 100% 50%;
   }
+
   100% {
-    background-position: 0% 50%;
+      background-position: 0% 50%;
   }
 }
-#loader-img {
-  background-color: #fff;
-  /* background-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-  /* background-size: 400% 400%; */
-  /* animation: gradient1 15s ease infinite; */
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  background-image: url(./373.gif);
+
+
+@keyframes flip {
+  35% {
+      transform: rotateX(360deg);
+  }
+
+  100% {
+      transform: rotatex(360deg);
+  }
+}
+
+
+
+
+.loader>span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader>span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.loader>span:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.loader>span:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+.loader>span:nth-child(6) {
+  animation-delay: 1.5s
+}
+
+.loader>span:nth-child(7) {
+  animation-delay: 1.8s
+}
+
+.loader>span:nth-child(8) {
+  animation-delay: 2.1s
+}
+
+.loader>span:nth-child(9) {
+  animation-delay: 2.4s
+}
+
+
+.loader {
+  background: #FFF;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  -webkit-perspective: 700px;
+  perspective: 700px;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: 9999999;
 }
-#loader-content {
-  position: fixed;
-  z-index: 99999999;
-  /* height: 100vh; */
-  /* width: 100%; */
+
+.loader-border-wrap {
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 350%);
-  /* text-align: center; */
+  padding: 5px;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
 }
+#loader{
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: #FFF;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  
+}
+/* loader ended */
+
+
 a {
   text-decoration: none;
 }
@@ -434,9 +513,24 @@ select,
 [type="number"]:focus {
   border: 1px solid #f23030;
 }
+input[type="email"]:focus,
+select,
+[type="email"]:focus {
+  border: 1px solid #f23030;
+}
 input[type="password"],
 select,
 [type="number"] {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type="email"],
+select,
+[type="email"] {
   background-color: rgb(230, 230, 230);
   border: none;
   width: 100%;

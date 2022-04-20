@@ -4,7 +4,7 @@
   <div class="section">
     <!-- student-login -->
     <div id="student" class="container">
-      <form method="post" action="#" id="student-login">
+      <form name="student" method="post" action="#"  id="student-login">
         <h1>
           <center>Log In<br>
             <h6>(Students)</h6>
@@ -12,7 +12,7 @@
         </h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['se'])){echo $_COOKIE['se'];}else{echo '';} ?>" required>
+            <input type="email" id="email" name="stu-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['se'])){echo $_COOKIE['se'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
@@ -43,7 +43,7 @@
 
     <!-- admin-login  -->
     <div id="admin" class="container">
-      <form method="post" action="#" id="admin-login">
+      <form name="admin" method="post" action="#" id="admin-login">
         <h1>
           <center>Log In<br>
             <h6>(Faculty)</h6>
@@ -51,7 +51,7 @@
         </h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="admin-email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['ae'])){echo $_COOKIE['ae'];}else{echo '';} ?>" required>
+            <input type="email" id="admin-email" name="admin-email" placeholder="Enter Your Email Id" autocomplete="off" value="<?php if(isset($_COOKIE['ae'])){echo $_COOKIE['ae'];}else{echo '';} ?>" required>
           </div>
         </div>
         <div class="row">
@@ -82,18 +82,18 @@
 
     <!-- student reg start -->
     <div class="container registration">
-      <form method="POST" action="" id="usignup">
+      <form name="reg" method="POST"  action="" id="usignup">
         <h1>
           <center>Sign Up</center>
         </h1>
         <div class="row">
           <div class="col">
-            <input type="text" id="uname" name="uname" placeholder="Your Full Name" autocomplete="off" required>
+            <input type="text" id="uname" name="uname" pattern="[A-Za-z]{3}" placeholder="Your Full Name" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="text" id="uemail" name="uemail" placeholder="Your Email Id" autocomplete="off" required>
+            <input type="email" id="uemail" name="uemail" placeholder="Your Email Id" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
@@ -113,12 +113,12 @@
         </div>
         <div class="row">
           <div class="col">
-            <input type="number" id="uphoneNo" name="uphoneno" placeholder="Enter Your Mobile Number" autocomplete="off" required>
+            <input type="number" id="uphoneNo" patte  name="uphoneno" placeholder="Enter Your Mobile Number" autocomplete="off" required>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <input type="password" id="upassword" name="upassword" placeholder="Enter Your Password" autocomplete="off" required>
+            <input type="password" id="upassword" minlength="8" name="upassword" placeholder="Enter Your Password" autocomplete="off" required>
           </div>
         </div>
         <div class="row">

@@ -10,49 +10,27 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="./js/menu.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
-  <script>
-    function validateForm() {
-      var y = document.forms["form"]["name"].value;
-      var letters = /^[A-Za-z]+$/;
-      if (y == null || y == "") {
-        alert("Name must be filled out.");
-        return false;
-      }
-      var z = document.forms["form"]["college"].value;
-      if (z == null || z == "") {
-        alert("college must be filled out.");
-        return false;
-      }
-      var x = document.forms["form"]["email"].value;
-      var atpos = x.indexOf("@");
-      var dotpos = x.lastIndexOf(".");
-      if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
-        alert("Not a valid e-mail address.");
-        return false;
-      }
-      var a = document.forms["form"]["password"].value;
-      if (a == null || a == "") {
-        alert("Password must be filled out");
-        return false;
-      }
-      if (a.length < 5 || a.length > 25) {
-        alert("Passwords must be 5 to 25 characters long.");
-        return false;
-      }
-      var b = document.forms["form"]["cpassword"].value;
-      if (a != b) {
-        alert("Passwords must match.");
-        return false;
-      }
-    }
-  </script>
+  
 </head>
 
 <body onload="rloader()">
-  <div id="loader">
-    <div id="loader-img"></div>
-    <span id="loader-content"><center>Dronacharya Group Of Institutions<center></span>
-  </div>
+<div id="loader">
+
+<div class="loader-border-wrap">
+    
+    <div class="loader">
+        <span class="bg">A</span>
+        <span class="bg">C</span>
+        <span class="bg">A</span>
+        <span class="bg">D</span>
+        <span class="bg">M</span>
+        <span class="bg">E</span>
+        <span class="bg">I</span>
+        <span class="bg">S</span>
+        <span class="bg">T</span>
+    </div>
+</div>
+</div>
   <?php
   require_once("./inc/navbar.php");
   require_once("./inc/content.php");
