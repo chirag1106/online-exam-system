@@ -265,26 +265,30 @@ $(document).ready(function () {
     if ($("#fsignup")[0].checkValidity()) {
       e.preventDefault();
       $("#faculty_signup").val("Please Wait...");
-      var phoneNo = $("#fphoneNo").length;
-      console.log(phoneNo);
+      // var phoneNo = $("#fphoneNo").length;
+      // console.log(phoneNo);
       // console.log("chirag");
-      if (phoneNo < 10 || phoneNo > 10) {
-        // console.log($("#fphoneNo").val());
-        if ($("#faculty_err_report").css("display") == "block") {
-          $("#faculty_err_report").css("display", "none");
-        }
-        $("#faculty_err_report").css("display", "block").text("* Please enter valid Phone Number");
-        $("#faculty_signup").val("Sign Up");
-      }
-      else if ($("#fpassword").val() != $("#fcpassword").val()) {
-        console.log("chirag");
-        if ($("#faculty_err_report").css("display") == "block") {
-          $("#faculty_err_report").css("display", "none");
-        }
-        $("#faculty_err_report").css("display", "block").text("* Confirm Password does not Password");
-        $("#faculty_signup").val("Sign Up");
-      }
-      else {
+      // if (phoneNo < 10 || phoneNo > 10) {
+      //   // console.log($("#fphoneNo").val());
+      //   if ($("#faculty_err_report").css("display") == "block") 
+      //   {
+      //     $("#faculty_err_report").css("display", "none");
+      //   }
+      //   $("#faculty_err_report").css("display", "block").text("* Please enter valid Phone Number");
+      //   $("#faculty_signup").val("Sign Up");
+      // }
+      // else if($("#fpassword").val() != $("#fcpassword").val())
+      // {
+      //   console.log("chirag");
+      //   if ($("#faculty_err_report").css("display") == "block") 
+      //   {
+      //     $("#faculty_err_report").css("display", "none");
+      //   }
+      //   $("#faculty_err_report").css("display", "block").text("* Confirm Password does not Password");
+      //   $("#faculty_signup").val("Sign Up");
+      // }
+      // else 
+      // {
         $.ajax({
           url: "./online-examination-systen-in-php-master-1/faculty_registration.php",
           type: "post",
@@ -310,7 +314,7 @@ $(document).ready(function () {
             }
           },
         });
-      }
+      // }
     }
   });
 });
