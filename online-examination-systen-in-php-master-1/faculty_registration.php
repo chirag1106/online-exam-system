@@ -8,6 +8,7 @@ if (isset($_POST['femail']) && !empty($_POST['femail'])) {
     $name = test_input($_POST['fname']);
     $name = ucwords(strtolower($name));
     $gender = test_input($_POST['fgender']);
+    // echo $gender; exit();
     $email = test_input($_POST['femail']);
     // $college = test_input($_POST['ucollege']);
     $phoneNo = test_input($_POST['fphoneno']);
