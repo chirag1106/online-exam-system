@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>DGI | TEST YOUR SKILL </title>
+  <title>DGI | Student Panel </title>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
   <link rel="stylesheet" href="css/main.css">
@@ -35,7 +35,7 @@
       </div>
       <div class="col-md-4 col-md-offset-2">
         <?php
-        require_once 'dbConnection.php';
+        require_once './dbConnection.php';
         session_start();
         if (!(isset($_SESSION['email']))) {
           header("location:../index.php");
@@ -45,8 +45,13 @@
 
           // include_once 'dbConnection.php';
           echo '<span class="pull-right top title1">
-                  <span class="log1"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span> &nbsp;&nbsp;&nbsp;&nbsp;Hello, </span> <a href="account.php?q=1" class="log log1">' . $name . '</a>&nbsp;|&nbsp;
-                  <a href="logout.php?q=account.php" class="log"> <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> &nbsp;Signout </a>
+                  <span class="log1"> 
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;Hello,
+                  </span> 
+                  <a href="account.php?q=1" class="log log1">' . $name . '</a>&nbsp;|&nbsp;
+                  <a href="logout.php?q=account.php" class="log"> 
+                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> &nbsp;Signout 
+                  </a>
                 </span>';
         } ?>
       </div>
@@ -65,7 +70,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- <a class="navbar-brand" href="#"><b>Netcamp</b></a> -->
+          <a class="navbar-brand" href="./account.php?q=1"><b>Dashboard</b></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
