@@ -38,7 +38,7 @@ body {
 /* loader started */
 .loader>span {
 
-  font-size: 130px;
+  font-size: 10vw;
   font-family: "franklin gothic medium", sans-serif;
   display: inline-block;
   animation: flip 2.6s  linear, gradient 5s ease infinite;
@@ -716,6 +716,9 @@ input[type="button"]:hover {
   .ham-menu {
     display: block;
   }
+  #loader{
+    width: 100%;
+  }
   .sub {
     display: none !important;
   }
@@ -733,6 +736,9 @@ input[type="button"]:hover {
 @media screen and (max-width: 660px) {
   .dev {
     padding-bottom: 100px !important ;
+  }
+  #loader{
+    width: 100%;
   }
   .profiles {
     flex-direction: column;
