@@ -89,11 +89,69 @@ $(document).ready(function () {
       $("#ham").show(1);
     }
   });
+  // func val
+  function validateForm() {
+    console.log("chirag");
+    var result = true;
+    var name =
+      document.forms["reg"]["uname"];
+    var letters = /^[A-Za-z]+$/;
+    if (name.value == null || name.value == "") {
+      alert("Name must be filled out.");
+      name.focus();
+      result = false;
+    }
+
+    var email =
+      document.forms["reg"]["uemail"];
+    var atpos = email.value.indexOf("@");
+    var dotpos = email.value.lastIndexOf(".");
+    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.value.length) {
+      alert("Not a valid e-mail address.");
+      email.focus();
+      result = false;
+    }
+
+    // var phone =
+    //   document.forms["reg"]["uphoneNo"];
+    var college =
+      document.forms["reg"]["ucollege"];
+    if (college.value == null || college.value == "") {
+      alert("college must be filled out.");
+      college.focus();
+      result = false;
+    }
+    var password =
+      document.forms["reg"]["upassword"];
+    if (password.value == null || password.value == "") {
+      alert("Password must be filled out");
+      password.focus();
+      result = false;
+    }
+    // if (password.value.length < 5 || password.value.length > 25) {
+    //   alert("Passwords must be 5 to 25 characters long.");
+    //   password.focus();
+    //   result = false;
+    // }
+    var cpassword =
+      document.forms["reg"]["ucpassword"];
+    if (password.value != cpassword.value) {
+      alert("Passwords must match.");
+      cpassword.focus();
+      result = false;
+    }
+    return result;
+  }
+
+
 
   $("#stu-submit").click(function (e) {
     if ($("#student-login")[0].checkValidity()) {
       e.preventDefault();
       $("#stu-submit").val("Please Wait...");
+
+
+
       $.ajax({
         url: "./online-examination-systen-in-php-master-1/login.php",
         type: "POST",
@@ -143,6 +201,7 @@ $(document).ready(function () {
           }
         },
       });
+
     }
   });
 
@@ -175,28 +234,30 @@ $(document).ready(function () {
       e.preventDefault();
       // console.log("chirag123");
       $("#user_signup").val("Please Wait...");
-      $.ajax({
-        type: "post",
-        url: "./online-examination-systen-in-php-master-1/sign.php",
-        data: $("#usignup").serialize(),
-        success: function (response) {
-          $("#user_signup").val("Sign Up");
-          if (response == "Registered Successfully") {
-            if ($("#user_err_report").css("display") == "block") {
-              $("#user_err_report").css("display", "none");
+      if (validateForm()) {
+        $.ajax({
+          type: "post",
+          url: "./online-examination-systen-in-php-master-1/sign.php",
+          data: $("#usignup").serialize(),
+          success: function (response) {
+            $("#user_signup").val("Sign Up");
+            if (response == "Registered Successfully") {
+              if ($("#user_err_report").css("display") == "block") {
+                $("#user_err_report").css("display", "none");
+              }
+              $("#user_success_report").css("display", "block").text(response);
+              $("#usignup")[0].reset();
+            } else {
+              if ($("#user_success_report").css("display") == "block") {
+                $("#user_success_report").css("display", "none");
+              }
+              $("#user_err_report")
+                .css("display", "block")
+                .text("* " + response);
             }
-            $("#user_success_report").css("display", "block").text(response);
-            $("#usignup")[0].reset();
-          } else {
-            if ($("#user_success_report").css("display") == "block") {
-              $("#user_success_report").css("display", "none");
-            }
-            $("#user_err_report")
-              .css("display", "block")
-              .text("* " + response);
-          }
-        },
-      });
+          },
+        });
+      }
     }
   });
 
@@ -209,25 +270,21 @@ $(document).ready(function () {
       // console.log("chirag");
       if (phoneNo < 10 || phoneNo > 10) {
         // console.log($("#fphoneNo").val());
-        if ($("#faculty_err_report").css("display") == "block") 
-        {
+        if ($("#faculty_err_report").css("display") == "block") {
           $("#faculty_err_report").css("display", "none");
         }
         $("#faculty_err_report").css("display", "block").text("* Please enter valid Phone Number");
         $("#faculty_signup").val("Sign Up");
       }
-      else if($("#fpassword").val() != $("#fcpassword").val())
-      {
+      else if ($("#fpassword").val() != $("#fcpassword").val()) {
         console.log("chirag");
-        if ($("#faculty_err_report").css("display") == "block") 
-        {
+        if ($("#faculty_err_report").css("display") == "block") {
           $("#faculty_err_report").css("display", "none");
         }
         $("#faculty_err_report").css("display", "block").text("* Confirm Password does not Password");
         $("#faculty_signup").val("Sign Up");
       }
-      else 
-      {
+      else {
         $.ajax({
           url: "./online-examination-systen-in-php-master-1/faculty_registration.php",
           type: "post",
